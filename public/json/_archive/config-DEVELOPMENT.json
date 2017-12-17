@@ -1,0 +1,313 @@
+{
+
+  "code_fragment_lookup": {
+
+    "fabrics_for_ui" : [
+
+      {
+        "silk" : [ "SILDAM", "SILWOO", "SILCOT", "SILLIN", "SILJAQ" ],
+        "cotton" : [ "COT" ],
+        "linen" : [ "LIN" ],
+        "wool" : [ "WOO" ],
+        "lace" : [ "LCE" ]
+      }
+    ],
+
+    "fabrics" : [
+      {
+        "code" : "SILDAM",
+        "uid" : "silk_damask",
+        "label" : "silk damask"
+      },
+      {
+        "code" : "SILWOO",
+        "uid" : "silk_wool",
+        "label" : "silk wool"
+      },
+      {
+        "code" : "SILCOT",
+        "uid" : "silk_cotton",
+        "label" : "silk cotton"
+      },
+      {
+        "code" : "SILLIN",
+        "uid" : "silk_linen",
+        "label" : "silk linen"
+      },
+      {
+        "code" : "SILJAQ",
+        "uid" : "silk_jacquard",
+        "label" : "silk jacquard"
+      },
+
+      {
+        "code" : "COT",
+        "uid" : "cotton",
+        "label" : "cotton"
+      },
+
+      {
+        "code" : "LIN",
+        "uid" : "linen",
+        "label" : "linen"
+      },
+
+      {
+        "code" : "WOO",
+        "uid" : "wool",
+        "label" : "wool"
+      },
+
+      {
+        "code" : "LCE",
+        "uid" : "lace",
+        "label" : "lace"
+      }
+
+    ],
+
+    "designs" : [
+      {
+        "code" : "EUS",
+        "name" : "eustace",
+        "label" : "eustace"
+      },
+      {
+        "code" : "CHA",
+        "name" : "chancery",
+        "label" : "chancery"
+      },
+      {
+        "code" : "LOM",
+        "name" : "lombard",
+        "label" : "lombard"
+      },
+      {
+        "code" : "CSM",
+        "name" : "cosimo",
+        "label" : "cosimo"
+      },
+      {
+        "code" : "PER",
+        "name" : "percyval",
+        "label" : "percyval"
+      },
+      {
+        "code" : "BAR",
+        "name" : "bargello",
+        "label" : "bargello"
+      },
+      {
+        "code" : "SID",
+        "name" : "sidney",
+        "label" : "sidney"
+      },
+      {
+        "code" : "ICC",
+        "name" : "indian_checked_cotton",
+        "label" : "indian checked cotton"
+      },
+      {
+        "code" : "INS",
+        "name" : "indian_striped_cotton",
+        "label" : "indian striped cotton"
+      }
+
+
+    ],
+
+
+    "colours": [
+      {
+        "code" : "IVYGLD",
+        "name" : "IVORY/GOLD",
+        "label" : "ivory gold"
+      },
+      {
+        "code" : "BLU",
+        "name" : "BLUE",
+        "label" : "blue"
+      },
+      {
+        "code" : "REDBRO",
+        "name" : "RED/BROWN",
+        "label" : "red brown"
+      },
+      {
+        "code" : "PURBLK",
+        "name" : "PURPLE/BLACK",
+        "label" : "purple black"
+      },
+      {
+        "code" : "IVY",
+        "name" : "IVORY",
+        "label" : "ivory"
+      },
+      {
+        "code" : "REDBLK",
+        "name" : "RED/BLACK",
+        "label" : "red black"
+      }
+    ]
+  },
+
+  "nav_items" : [
+
+    {
+      "label" : "silk",
+      "uri" : "catalogue:silk"
+    },
+    {
+      "label" : "cotton",
+      "uri" : "catalogue:cotton"
+    },
+    {
+      "label" : "linen",
+      "uri" : "catalogue:linen"
+    },
+    {
+      "label" : "wool",
+      "uri" : "catalogue:wool"
+    },
+    {
+      "label" : "lace",
+      "uri" : "catalogue:lace"
+    },
+    {
+      "label" : "sundries",
+      "uri" : "sundries"
+    }
+  ],
+
+
+  "colours" : [
+
+    {
+      "white" : {
+        "label" : "white",
+        "uid" : "white"
+      }
+    }
+  ,
+    {
+      "ecru" : {
+        "label" : "ecru",
+        "uid" : "ecru"
+      }
+    }
+  ,
+    {
+      "green" : {
+        "label" : "green",
+        "uid" : "green"
+      }
+    }
+  ,
+    {
+      "grey" : {
+        "label" : "grey",
+        "uid" : "grey"
+      }
+    }
+  ,
+    {
+      "brown" : {
+        "label" : "brown",
+        "uid" : "brown"
+      }
+    }
+  ,
+    {
+      "gold" : {
+        "label" : "gold",
+        "uid" : "gold"
+      }
+    }
+  ,
+    {
+      "ivory" : {
+        "label" : "ivory",
+        "uid" : "ivory"
+      }
+    }
+  ,
+    {
+      "pink" : {
+        "label" : "pink",
+        "uid" : "pink"
+      }
+    }
+  ,
+    {
+      "apricot" : {
+        "label" : "apricot",
+        "uid" : "apricot"
+      }
+    }
+  ,
+    {
+      "red" : {
+        "label" : "red",
+        "uid" : "red"
+      }
+    }
+  ,
+    {
+      "purple" : {
+        "label" : "purple",
+        "uid" : "purple"
+      }
+    }
+  ,
+    {
+      "silver" : {
+        "label" : "silver",
+        "uid" : "silver"
+      }
+    }
+  ,
+    {
+      "natural" : {
+        "label" : "natural",
+        "uid" : "natural"
+      }
+    }
+  ,
+    {
+      "yellow" : {
+        "label" : "yellow",
+        "uid" : "yellow"
+      }
+    }
+  ,
+    {
+      "blue" : {
+        "label" : "blue",
+        "uid" : "blue"
+      }
+    }
+  ,
+    {
+      "wine" : {
+        "label" : "wine",
+        "uid" : "wine"
+      }
+    }
+  ,
+    {
+      "black" : {
+        "label" : "black",
+        "uid" : "black"
+      }
+    }
+  ,
+    {
+      "metallic" : {
+        "label" : "metallic",
+        "uid" : "metallic"
+      }
+    }
+
+
+  ]
+}

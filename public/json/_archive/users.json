@@ -1,0 +1,24 @@
+{
+  "users" : [
+
+    {
+      "full_name" : "Foo Bardot",
+      "company" : "Bardot Butresses",
+      "email" : "foo@bar.com",
+      "enabled" : true
+    },
+    {
+      "full_name" : "Baz Zazton",
+      "company" : "Zazton jerk chicken",
+      "email" : "baz@zazton.com",
+      "enabled" : true
+    },
+    {
+      "full_name" : "Zorg Magorg",
+      "company" : "",
+      "email" : "zorg@magorg.com",
+      "enabled" : true
+    }
+
+  ]
+}
