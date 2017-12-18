@@ -2,18 +2,14 @@ var express = require( "express" );
 var fs = require( "fs" );
 var path = require( "path" );
 var routes = require( "./routes/index" );
-
 var mongo = require('mongodb');
 var monk = require('monk');
-
 var bb = require('express-busboy');
-// var fileUpload = require('express-fileupload');
-
-// var bodyParser = require('body-parser');
-
 
 
 var App = function(){
+
+    console.log('/server/ -App');
 
     var _this = this;
 
@@ -71,36 +67,17 @@ var App = function(){
 
     _this.initServer = function() {
 
+        console.log('/server/ -initServer');
+
         _this.app = express(); // *** fix for above being deprecated
 
         _this.app.engine('html', require('ejs').renderFile);
         _this.app.use( express.static( path.join( __dirname, "public" )));
 
-        // _this.app.use(fileUpload());
-
         bb.extend( _this.app, {
             upload : true,
             path: "./public/_upload-temp"
         } );
-
-
-        /*bb.extend( _this.app, {
-            upload: true,
-            path: "./public"
-        });*/
-
-        //allowedPath : /.FOO$/
-
-
-        // bb.options.allowedPath = function(url) {
-        //     return url == '/FOO';
-        // };
-
-        // _this.app.use( bb );
-
-
-        // _this.app.use( bodyParser.json() ); // support json encoded bodies
-        // _this.app.use( bodyParser.urlencoded({ extended: true }) ); // support encoded bodies
 
         // Make our db accessible to our router
         _this.app.use(function( req, res, next ){
@@ -111,40 +88,10 @@ var App = function(){
         _this.app.use( "/", routes); // RESTORE
 
 
-
-
-
-        /**
-         * FIXIT not sure if this is stopping js routing - will need to investigate
-         */
-        /*_this.app.use(function(req, res, next) {
-         /!*var err = new Error('Not Found');
-         err.status = 404;
-         next(err);*!/
-
-         res.render( "index.ejs" ); // *** NOTE go to index page on 404 - TODO better handling or not bother?
-         });*/
-
-
         // REMOVE - testing original framework in situ
         _this.app.get("/test", function( req, res ){
-            // res.render( "page3.html" );
             res.sendFile( __dirname + "/public/test-delete/index.html" );
         });
-
-
-
-        /*_this.app.all('*', function(req, res, next) {
-         //console.log("/server3/ - ", req );
-         //res.sendFile( __dirname + "/dist/index.html" );
-
-         console.log("/server/ - ALL?");
-
-         res.render( "index.ejs", { foo : "mofo folk bonobo zooboodoo" } );
-
-         });*/
-
-
 
 
 
@@ -178,6 +125,9 @@ var App = function(){
 
 
     _this.init = function() {
+
+        console.log('/server/ -init');
+
         _this.initIP();
         //_this.initCache(); // *** TODO might need this!
         _this.setupTerminationHandlers();
@@ -190,6 +140,9 @@ var App = function(){
 
 
     _this.start = function() {
+
+        console.log('/server/ -start');
+
         //  Start the app on the specific interface (and port).
         _this.app.listen(_this.port, _this.ipaddress, function() {
             console.log('%s: Node server started on %s:%d ...',
@@ -199,6 +152,8 @@ var App = function(){
 
 
     _this.initMongoDB = function(){
+
+        console.log('/server/ -initMongoDB');
 
         var connection_string = "localhost:27017/centrepede-test";
 
@@ -213,18 +168,11 @@ var App = function(){
 
         console.log("/server/ -initMongoDB --connection_string", connection_string );
 
-        // *** FIXIT this might be occasional causing startup failure - 200816 : actually i think it's chrome cookies not being ready
-        // *** NOTE USEFUL TO CHECK DB CONNECTED!
-        /*_this.db = monk( connection_string ); // *** db path
-         var foobar = _this.db.get("foobar");
-
-         var r = foobar.find({}, function( _error, _data ){
-         console.log("/server/ - FIND", _error, _data );
-         });*/
-
         _this.db = monk( connection_string ); // *** db path NOTE open connection?
     };
 };
+
+console.log('/server/ -');
 
 var app = new App();
 app.init();
