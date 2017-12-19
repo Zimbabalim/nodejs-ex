@@ -15,6 +15,8 @@ var App = function(){
 
     _this.initIP = function(){
 
+        console.log('/server/ -initIP');
+
         _this.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
         _this.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
