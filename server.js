@@ -13,7 +13,7 @@ var monk = require('monk');
 var bb = require('express-busboy');
 // ===
 
-
+console.log('/server/ - >>');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
@@ -92,6 +92,6 @@ initDb(function(err){
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
-console.log('/server/ - @as');
+console.log('/server/ - <<');
 
 module.exports = app ;

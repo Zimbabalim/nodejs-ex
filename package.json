@@ -32,7 +32,8 @@
     "lodash": "^4.16.4",
     "mongodb": "^1.4.4",
     "mongojs": "^2.3.0",
-    "monk": "^3.1.2"
+    "monk": "^3.1.2",
+    "object-assign":"4.1.0"
   },
   "devDependencies": {},
   "bundleDependencies": [],
