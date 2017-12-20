@@ -27,7 +27,7 @@ var App = function(){
             // _this.ipaddress = "127.0.0.1";
             _this.ipaddress = "0.0.0.0";
 
-            console.warn('No OPENSHIFT_NODEJS_IP var, using:', this.ipaddress);
+            console.warn('No OPENSHIFT_NODEJS_IP var, using (@as):', this.ipaddress);
         }
     };
 
@@ -54,7 +54,7 @@ var App = function(){
 
     _this.terminator = function( _sig ){
         if (typeof _sig === "string") {
-            console.log('%s: Received %s - terminating sample app ...',  Date( Date.now()), _sig );
+            console.log('%s: Received %s - terminating sample app (@as?)...',  Date( Date.now()), _sig );
             process.exit( 1 );
         }
         console.log('%s: Node server stopped.', Date( Date.now() ) );
@@ -94,16 +94,15 @@ var App = function(){
 
 
         // REMOVE - testing original framework in situ
-        _this.app.get("/test", function( req, res ){
+        // @as : migration removed TEST
+        /*_this.app.get("/test", function( req, res ){
             res.sendFile( __dirname + "/public/test-delete/index.html" );
-        });
+        });*/
 
 
-
-// error handlers
-
-// development error handler
-// will print stacktrace
+        // error handlers
+        // development error handler
+        // will print stacktrace
         if (_this.app.get('env') === 'development') {
             _this.app.use(function(err, req, res, next) {
                 res.status(err.status || 500);
@@ -114,8 +113,8 @@ var App = function(){
             });
         }
 
-// production error handler
-// no stacktraces leaked to user
+        // production error handler
+        // no stacktraces leaked to user
         _this.app.use(function(err, req, res, next) {
             res.status(err.status || 500);
             res.render('error.ejs', {
@@ -123,9 +122,6 @@ var App = function(){
                 error: {}
             });
         });
-
-
-
     };
 
 
@@ -138,7 +134,8 @@ var App = function(){
         _this.setupTerminationHandlers();
 
         // Create the express server and routes.
-        _this.initMongoDB(); // TEST ONLY!!!
+
+        // _this.initMongoDB(); @as : migration removed TEST
         _this.initServer();
 
     };
