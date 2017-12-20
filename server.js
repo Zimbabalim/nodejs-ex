@@ -132,7 +132,7 @@ var App = function(){
 
         _this.initIP();
         //_this.initCache(); // *** TODO might need this!
-        _this.setupTerminationHandlers();
+        // _this.setupTerminationHandlers(); // @as : migration removed TEST
 
         // Create the express server and routes.
 
