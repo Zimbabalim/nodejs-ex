@@ -1,182 +1,108 @@
-var express = require( "express" );
-var fs = require( "fs" );
-var path = require( "path" );
-var routes = require( "./routes/index" );
-var mongo = require('mongodb');
-var monk = require('monk');
-var bb = require('express-busboy');
+//  OpenShift sample Node application
+var express = require('express'),
+    app     = express(),
+    morgan  = require('morgan');
+    
+Object.assign=require('object-assign')
 
+app.engine('html', require('ejs').renderFile);
+app.use(morgan('combined'))
 
-var App = function(){
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
+    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
+    mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
+    mongoURLLabel = "";
 
-    console.log('/server/ -App');
+if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
+  var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
+      mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
+      mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
+      mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
+      mongoPassword = process.env[mongoServiceName + '_PASSWORD']
+      mongoUser = process.env[mongoServiceName + '_USER'];
 
-    var _this = this;
+  if (mongoHost && mongoPort && mongoDatabase) {
+    mongoURLLabel = mongoURL = 'mongodb://';
+    if (mongoUser && mongoPassword) {
+      mongoURL += mongoUser + ':' + mongoPassword + '@';
+    }
+    // Provide UI label that excludes user id and pw
+    mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
+    mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
 
-    _this.initIP = function(){
+  }
+}
+var db = null,
+    dbDetails = new Object();
 
-        console.log('/server/ -initIP');
+var initDb = function(callback) {
+  if (mongoURL == null) return;
 
-        _this.ipaddress = process.env.OPENSHIFT_NODEJS_IP;
-        _this.port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+  var mongodb = require('mongodb');
+  if (mongodb == null) return;
 
-        if (typeof _this.ipaddress === "undefined") {
-            //  Log errors on OpenShift but continue w/ 127.0.0.1 - this
-            //  allows us to run/test the app locally.
+  mongodb.connect(mongoURL, function(err, conn) {
+    if (err) {
+      callback(err);
+      return;
+    }
 
-            // _this.ipaddress = "127.0.0.1";
-            _this.ipaddress = "0.0.0.0";
+    db = conn;
+    dbDetails.databaseName = db.databaseName;
+    dbDetails.url = mongoURLLabel;
+    dbDetails.type = 'MongoDB';
 
-            console.warn('No OPENSHIFT_NODEJS_IP var, using (@as):', this.ipaddress);
-        }
-    };
-
-
-    // *** NOTE not calling this at the moment, but worth considering working it out
-    _this.initCache = function(){
-
-        console.log("/server/ -initCache ");
-
-        if (typeof _this.cache === "undefined") {
-            _this.cache = { 'index.html': '' };
-        }
-
-        //  Local cache for static content.
-        _this.cache['index.html'] = fs.readFileSync('./index.html');
-
-    };
-
-
-    _this.cache_get = function( _key ) {
-        return _this.cache[ _key ];
-    };
-
-
-    // @as : migration - removed TEST
-    /*_this.terminator = function( _sig ){
-        if (typeof _sig === "string") {
-            console.log('%s: Received %s - terminating sample app (@as?)...',  Date( Date.now()), _sig, '<<<' );
-            process.exit( 1 );
-        }
-        console.log('%s: Node server stopped.', Date( Date.now() ) );
-    };
-
-    _this.setupTerminationHandlers = function(){
-        process.on('exit', function() { _this.terminator(); });
-        ['SIGHUP', 'SIGINT', 'SIGQUIT', 'SIGILL', 'SIGTRAP', 'SIGABRT', 'SIGBUS', 'SIGFPE', 'SIGUSR1', 'SIGSEGV', 'SIGUSR2', 'SIGTERM'].forEach(function(element, index, array) {
-            process.on( element, function() { _this.terminator( element ); });
-        });
-    };*/
-
-
-
-
-    _this.initServer = function() {
-
-        console.log('/server/ -initServer');
-
-        _this.app = express(); // *** fix for above being deprecated
-
-        _this.app.engine('html', require('ejs').renderFile);
-        _this.app.use( express.static( path.join( __dirname, "public" )));
-
-        bb.extend( _this.app, {
-            upload : true,
-            path: "./public/_upload-temp"
-        } );
-
-        // Make our db accessible to our router
-        _this.app.use(function( req, res, next ){
-            req.db = _this.db;
-            next();
-        });
-
-        _this.app.use( "/", routes); // RESTORE
-
-
-        // REMOVE - testing original framework in situ
-        // @as : migration removed TEST
-        /*_this.app.get("/test", function( req, res ){
-            res.sendFile( __dirname + "/public/test-delete/index.html" );
-        });*/
-
-
-        // error handlers
-        // development error handler
-        // will print stacktrace
-        if (_this.app.get('env') === 'development') {
-            _this.app.use(function(err, req, res, next) {
-                res.status(err.status || 500);
-                res.render('error.ejs', {
-                    message: err.message,
-                    error: err
-                });
-            });
-        }
-
-        // production error handler
-        // no stacktraces leaked to user
-        _this.app.use(function(err, req, res, next) {
-            res.status(err.status || 500);
-            res.render('error.ejs', {
-                message: err.message,
-                error: {}
-            });
-        });
-    };
-
-
-    _this.init = function() {
-
-        console.log('/server/ -init');
-
-        _this.initIP();
-        //_this.initCache(); // *** TODO might need this!
-        // _this.setupTerminationHandlers(); // @as : migration removed TEST
-
-        // Create the express server and routes.
-
-        // _this.initMongoDB(); @as : migration removed TEST
-        _this.initServer();
-
-    };
-
-
-    _this.start = function() {
-
-        console.log('/server/ -start');
-
-        //  Start the app on the specific interface (and port).
-        _this.app.listen(_this.port, _this.ipaddress, function() {
-            console.log('%s: Node server started on %s:%d ...',
-                Date(Date.now() ), _this.ipaddress, _this.port);
-        });
-    };
-
-
-    _this.initMongoDB = function(){
-
-        console.log('/server/ -initMongoDB');
-
-        var connection_string = "localhost:27017/centrepede-test";
-
-        if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
-            connection_string =
-                process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
-                process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
-                process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
-                process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
-                process.env.OPENSHIFT_APP_NAME;
-        }
-
-        console.log("/server/ -initMongoDB --connection_string", connection_string );
-
-        _this.db = monk( connection_string ); // *** db path NOTE open connection?
-    };
+    console.log('Connected to MongoDB at: %s', mongoURL);
+  });
 };
 
-console.log('/server/ -');
+app.get('/', function (req, res) {
+  // try to initialize the db on every request if it's not already
+  // initialized.
+  if (!db) {
+    initDb(function(err){});
+  }
+  if (db) {
+    var col = db.collection('counts');
+    // Create a document with request IP and current time of request
+    col.insert({ip: req.ip, date: Date.now()});
+    col.count(function(err, count){
+      if (err) {
+        console.log('Error running count. Message:\n'+err);
+      }
+      res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
+    });
+  } else {
+    res.render('index.html', { pageCountMessage : null});
+  }
+});
 
-var app = new App();
-app.init();
-app.start();
+app.get('/pagecount', function (req, res) {
+  // try to initialize the db on every request if it's not already
+  // initialized.
+  if (!db) {
+    initDb(function(err){});
+  }
+  if (db) {
+    db.collection('counts').count(function(err, count ){
+      res.send('{ pageCount: ' + count + '}');
+    });
+  } else {
+    res.send('{ pageCount: -1 }');
+  }
+});
+
+// error handling
+app.use(function(err, req, res, next){
+  console.error(err.stack);
+  res.status(500).send('Something bad happened!');
+});
+
+initDb(function(err){
+  console.log('Error connecting to Mongo. Message:\n'+err);
+});
+
+app.listen(port, ip);
+console.log('Server running on http://%s:%s', ip, port);
+
+module.exports = app ;
