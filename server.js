@@ -57,6 +57,10 @@ var db = null,
     dbDetails = new Object();
 
 var initDb = function(callback) {
+
+    console.log('/server/ -initDb --disable db connect');
+    return; // REMOVE - TEST disable db connect
+
     if (mongoURL == null) return;
 
     var mongodb = require('mongodb');
