@@ -20,11 +20,11 @@ app.engine('html', require('ejs').renderFile);
 app.use(morgan('combined')); //@as removed
 
 // @as added
-/*app.use( express.static( path.join( __dirname, "public" )));
+app.use( express.static( path.join( __dirname, "public" )));
 bb.extend( app, {
     upload : true,
     path: "./public/_upload-temp"
-} );*/ // RESTORE
+} ); // RESTORE
 app.use( "/", routes); // @as removed RESTORE
 // ===
 
@@ -81,22 +81,10 @@ var initDb = function(callback) {
     });
 };
 
-// @as : to pass http probes..?
+/**
+ * stub this call for the http probes (liveness, readiness), otherwise pod won't deploy
+ */
 app.get('/pagecount', function (req, res) {
-    // try to initialize the db on every request if it's not already
-    // initialized.
-    /*if (!db) {
-        initDb(function(err){});
-    }
-    if (db) {
-        db.collection('counts').count(function(err, count ){
-            res.send('{ pageCount: ' + count + '}');
-        });
-    } else {
-        res.send('{ pageCount: -1 }');
-    }*/
-
-    console.log('/server/ --HTTP probe?');
     res.send('{ pageCount: -1 }');
 });
 

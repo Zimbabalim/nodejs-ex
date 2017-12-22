@@ -1,0 +1,2375 @@
+{
+
+  "code_fragment_lookup": {
+
+    "fabrics_for_ui" : [
+
+      {
+        "silk" : [ "SILCNL", "SILCOT", "SILDAM", "SILJAQ", "SILLCE", "SILLIN", "SILMOI", "SILORG", "SILQUI", "SILTAF", "SILWOO" ],
+        "cotton" : [ "COT","COTLCE", "COTLIN", "COTMUS", "COTPRI", "MUSPRI", "SILCOT", "SILMOI" ],
+        "linen" : [ "COTLIN", "SILLIN"],
+        "wool" : [ "WOO", "SILWOO"],
+        "lace" : [ "COTLCE", "SILLCE"]
+      }
+    ],
+
+    "fabrics" : [
+      {
+        "code": "COT",
+        "label": "Cotton",
+        "uid": "cotton"
+      },
+      {
+        "code": "COTLCE",
+        "label": "Cotton Lace",
+        "uid": "cotton_lace"
+      },
+      {
+        "code": "COTLIN",
+        "label": "Cotton Linen",
+        "uid": "cotton_linen"
+      },
+      {
+        "code": "COTMUS",
+        "label": "Cotton Muslin",
+        "uid": "cotton_muslin"
+      },
+      {
+        "code": "COTPRI",
+        "label": "Cotton Print",
+        "uid": "cotton_print"
+      },
+      {
+        "code": "MUSPRI",
+        "label": "Muslin Print",
+        "uid": "muslin_print"
+      },
+      {
+        "code": "SIL",
+        "label": "Silk",
+        "uid": "silk"
+      },
+      {
+        "code": "SILJAQ",
+        "label": "Silk Jacquard",
+        "uid": "silk_jacquard"
+      },
+      {
+        "code": "SILCNL",
+        "label": "Silk Cotton Chenille",
+        "uid": "silk_cotton_chenille"
+      },
+      {
+        "code": "SILCOT",
+        "label": "Silk Cotton",
+        "uid": "silk_cotton"
+      },
+      {
+        "code": "SILDAM",
+        "label": "Silk Damask",
+        "uid": "silk_damask"
+      },
+      {
+        "code": "SILLCE",
+        "label": "Silk Lace",
+        "uid": "silk_lace"
+      },
+      {
+        "code": "SILLIN",
+        "label": "Silk Linen",
+        "uid": "silk_linen"
+      },
+      {
+        "code": "SILMOI",
+        "label": "Silk Cotton Moire",
+        "uid": "silk_cotton_moire"
+      },
+      {
+        "code": "SILORG",
+        "label": "Silk Organza",
+        "uid": "silk_organza"
+      },
+      {
+        "code": "SILQUI",
+        "label": "Silk Quilting",
+        "uid": "silk_quilting"
+      },
+      {
+        "code": "SILTAF",
+        "label": "Silk Tafetta",
+        "uid": "silk_tafetta"
+      },
+      {
+        "code": "SILWOO",
+        "label": "Silk Wool",
+        "uid": "silk_wool"
+      },
+      {
+        "code": "WOO",
+        "label": "Wool",
+        "uid": "wool"
+      }
+    ],
+
+    "designs" : [
+      {
+        "code": "ACA",
+        "label": "acanthus",
+        "name": "acanthus"
+      },
+      {
+        "code": "ADE",
+        "label": "adelaide",
+        "name": "adelaide"
+      },
+      {
+        "code": "AGN",
+        "label": "agnes",
+        "name": "agnes"
+      },
+      {
+        "code": "ALB",
+        "label": "albertine",
+        "name": "albertine"
+      },
+      {
+        "code": "ALF",
+        "label": "alfonso",
+        "name": "alfonso"
+      },
+      {
+        "code": "AMA",
+        "label": "amaryllis",
+        "name": "amaryllis"
+      },
+      {
+        "code": "AUG",
+        "label": "augusta",
+        "name": "augusta"
+      },
+      {
+        "code": "BAR",
+        "label": "bargello",
+        "name": "bargello"
+      },
+      {
+        "code": "BAS",
+        "label": "basket",
+        "name": "basket"
+      },
+      {
+        "code": "BCS",
+        "label": "brown checks and stripes",
+        "name": "brown_checks_and_stripes"
+      },
+      {
+        "code": "BET",
+        "label": "betty",
+        "name": "betty"
+      },
+      {
+        "code": "BRI",
+        "label": "bricks",
+        "name": "bricks"
+      },
+      {
+        "code": "BSF",
+        "label": "brown stripes figured",
+        "name": "brown_stripes_figured"
+      },
+      {
+        "code": "BST",
+        "label": "biscuit stripes",
+        "name": "biscuit_stripes"
+      },
+      {
+        "code": "BYE",
+        "label": "birds eye",
+        "name": "birds_eye"
+      },
+      {
+        "code": "CCS",
+        "label": "coloured stripes",
+        "name": "coloured_stripes"
+      },
+      {
+        "code": "CDR",
+        "label": "chandar",
+        "name": "chandar"
+      },
+      {
+        "code": "CEC",
+        "label": "cecil",
+        "name": "cecil"
+      },
+      {
+        "code": "CHA",
+        "label": "chancery",
+        "name": "chancery"
+      },
+      {
+        "code": "CHM",
+        "label": "checked muslin",
+        "name": "checked_muslin"
+      },
+      {
+        "code": "CLE",
+        "label": "clemence",
+        "name": "clemence"
+      },
+      {
+        "code": "CND",
+        "label": "coriander",
+        "name": "coriander"
+      },
+      {
+        "code": "COG",
+        "label": "cloth of gold",
+        "name": "cloth_of_gold"
+      },
+      {
+        "code": "COR",
+        "label": "corelli",
+        "name": "corelli"
+      },
+      {
+        "code": "COS",
+        "label": "cloth of silver",
+        "name": "cloth_of_silver"
+      },
+      {
+        "code": "CRN",
+        "label": "cornelius",
+        "name": "cornelius"
+      },
+      {
+        "code": "CSM",
+        "label": "cosimo",
+        "name": "cosimo"
+      },
+      {
+        "code": "DBA",
+        "label": "dorabella",
+        "name": "dorabella"
+      },
+      {
+        "code": "DBP",
+        "label": "double paisley",
+        "name": "double_paisley"
+      },
+      {
+        "code": "DES",
+        "label": "desert wool",
+        "name": "desert_wool"
+      },
+      {
+        "code": "DFA",
+        "label": "double faced",
+        "name": "double_faced"
+      },
+      {
+        "code": "DGL",
+        "label": "diagonal rib",
+        "name": "diagonal_rib"
+      },
+      {
+        "code": "DIA",
+        "label": "diaper",
+        "name": "diaper"
+      },
+      {
+        "code": "DOR",
+        "label": "doris",
+        "name": "doris"
+      },
+      {
+        "code": "DTH",
+        "label": "dorothea",
+        "name": "dorothea"
+      },
+      {
+        "code": "DUD",
+        "label": "dudley",
+        "name": "dudley"
+      },
+      {
+        "code": "EDI",
+        "label": "edith",
+        "name": "edith"
+      },
+      {
+        "code": "EDN",
+        "label": "edna",
+        "name": "edna"
+      },
+      {
+        "code": "EGE",
+        "label": "egerton",
+        "name": "egerton"
+      },
+      {
+        "code": "END",
+        "label": "endymion",
+        "name": "endymion"
+      },
+      {
+        "code": "ERI",
+        "label": "erica",
+        "name": "erica"
+      },
+      {
+        "code": "ETH",
+        "label": "ethel",
+        "name": "ethel"
+      },
+      {
+        "code": "EUS",
+        "label": "eustace",
+        "name": "eustace"
+      },
+      {
+        "code": "EVE",
+        "label": "eve",
+        "name": "eve"
+      },
+      {
+        "code": "EVN",
+        "label": "evelyn",
+        "name": "evelyn"
+      },
+      {
+        "code": "FAT",
+        "label": "flowers and trellis",
+        "name": "flowers_and_trellis"
+      },
+      {
+        "code": "FBA",
+        "label": "floribunda",
+        "name": "floribunda"
+      },
+      {
+        "code": "FER",
+        "label": "ferdinand",
+        "name": "ferdinand"
+      },
+      {
+        "code": "FLO",
+        "label": "florence",
+        "name": "florence"
+      },
+      {
+        "code": "FLS",
+        "label": "flowery stripes",
+        "name": "flowery_stripes"
+      },
+      {
+        "code": "FRO",
+        "label": "frost",
+        "name": "frost"
+      },
+      {
+        "code": "FRODRK",
+        "label": "don't know, think this might be wrong",
+        "name": "don't_know,_think_this_might_be_wrong"
+      },
+      {
+        "code": "FSN",
+        "label": "floristan",
+        "name": "floristan"
+      },
+      {
+        "code": "FUS",
+        "label": "fucshia",
+        "name": "fucshia"
+      },
+      {
+        "code": "GER",
+        "label": "gertrude",
+        "name": "gertrude"
+      },
+      {
+        "code": "GRA",
+        "label": "grace",
+        "name": "grace"
+      },
+      {
+        "code": "GRO",
+        "label": "grosgrain",
+        "name": "grosgrain"
+      },
+      {
+        "code": "HES",
+        "label": "hester",
+        "name": "hester"
+      },
+      {
+        "code": "HIB",
+        "label": "hibiscus",
+        "name": "hibiscus"
+      },
+      {
+        "code": "HID",
+        "label": "hilliard",
+        "name": "hilliard"
+      },
+      {
+        "code": "HIL",
+        "label": "hilda",
+        "name": "hilda"
+      },
+      {
+        "code": "HOW",
+        "label": "howard",
+        "name": "howard"
+      },
+      {
+        "code": "ICC",
+        "label": "indian checked cotton",
+        "name": "indian_checked_cotton"
+      },
+      {
+        "code": "ICS",
+        "label": "indian checked silk",
+        "name": "indian_checked_silk"
+      },
+      {
+        "code": "IMC",
+        "label": "indian micro checked silk",
+        "name": "indian_micro_checked_silk"
+      },
+      {
+        "code": "IMS",
+        "label": "indian medium striped cotton",
+        "name": "indian_medium_striped_cotton"
+      },
+      {
+        "code": "INS",
+        "label": "indian narrow striped cotton",
+        "name": "indian_narrow_striped_cotton"
+      },
+      {
+        "code": "ISA",
+        "label": "isabella",
+        "name": "isabella"
+      },
+      {
+        "code": "ISI",
+        "label": "indian silk",
+        "name": "indian_silk"
+      },
+      {
+        "code": "ISS",
+        "label": "indian striped silk",
+        "name": "indian_striped_silk"
+      },
+      {
+        "code": "IWC",
+        "label": "indian windowpane checked silk",
+        "name": "indian_windowpane_checked_silk"
+      },
+      {
+        "code": "JAC",
+        "label": "jacobean",
+        "name": "jacobean"
+      },
+      {
+        "code": "JAM",
+        "label": "jammu",
+        "name": "jammu"
+      },
+      {
+        "code": "JEM",
+        "label": "jemima",
+        "name": "jemima"
+      },
+      {
+        "code": "KAZ",
+        "label": "kazak",
+        "name": "kazak"
+      },
+      {
+        "code": "KNO",
+        "label": "knots",
+        "name": "knots"
+      },
+      {
+        "code": "LAT",
+        "label": "lattice",
+        "name": "lattice"
+      },
+      {
+        "code": "LAV",
+        "label": "lavinia",
+        "name": "lavinia"
+      },
+      {
+        "code": "LEA",
+        "label": "leaves",
+        "name": "leaves"
+      },
+      {
+        "code": "LEO",
+        "label": "leonora",
+        "name": "leonora"
+      },
+      {
+        "code": "LOM",
+        "label": "lombard",
+        "name": "lombard"
+      },
+      {
+        "code": "LOV",
+        "label": "lovage",
+        "name": "lovage"
+      },
+      {
+        "code": "LPY",
+        "label": "leaning paisley",
+        "name": "leaning_paisley"
+      },
+      {
+        "code": "MAP",
+        "label": "maple",
+        "name": "maple"
+      },
+      {
+        "code": "MAR",
+        "label": "marcella",
+        "name": "marcella"
+      },
+      {
+        "code": "MAT",
+        "label": "matilda",
+        "name": "matilda"
+      },
+      {
+        "code": "MEA",
+        "label": "meadow",
+        "name": "meadow"
+      },
+      {
+        "code": "MGL",
+        "label": "morning glory",
+        "name": "morning_glory"
+      },
+      {
+        "code": "MIL",
+        "label": "mildred",
+        "name": "mildred"
+      },
+      {
+        "code": "MIR",
+        "label": "mirabel",
+        "name": "mirabel"
+      },
+      {
+        "code": "MIX",
+        "label": "mixed stripes",
+        "name": "mixed_stripes"
+      },
+      {
+        "code": "MRI",
+        "label": "mari",
+        "name": "mari"
+      },
+      {
+        "code": "MUM",
+        "label": "multi striped muslin",
+        "name": "multi_striped_muslin"
+      },
+      {
+        "code": "NAV",
+        "label": "navarre",
+        "name": "navarre"
+      },
+      {
+        "code": "NEV",
+        "label": "neville",
+        "name": "neville"
+      },
+      {
+        "code": "NOR",
+        "label": "norwich",
+        "name": "norwich"
+      },
+      {
+        "code": "NST",
+        "label": "narrow stripes",
+        "name": "narrow_stripes"
+      },
+      {
+        "code": "ORI",
+        "label": "orion",
+        "name": "orion"
+      },
+      {
+        "code": "OSC",
+        "label": "olive stripes and checks",
+        "name": "olive_stripes_and_checks"
+      },
+      {
+        "code": "OST",
+        "label": "olive stripes",
+        "name": "olive_stripes_"
+      },
+      {
+        "code": "OTO",
+        "label": "ottoman",
+        "name": "ottoman"
+      },
+      {
+        "code": "PAL",
+        "label": "palmyra",
+        "name": "palmyra"
+      },
+      {
+        "code": "PBS",
+        "label": "pale blue stripes",
+        "name": "pale_blue_stripes"
+      },
+      {
+        "code": "PEO",
+        "label": "peony",
+        "name": "peony"
+      },
+      {
+        "code": "PER",
+        "label": "percyval",
+        "name": "percyval"
+      },
+      {
+        "code": "PIM",
+        "label": "pimpernel",
+        "name": "pimpernel"
+      },
+      {
+        "code": "PIN",
+        "label": "pineapple",
+        "name": "pineapple"
+      },
+      {
+        "code": "PLU",
+        "label": "plumes",
+        "name": "plumes"
+      },
+      {
+        "code": "POI",
+        "label": "pointy",
+        "name": "pointy"
+      },
+      {
+        "code": "POL",
+        "label": "polygons",
+        "name": "polygons"
+      },
+      {
+        "code": "PSA",
+        "label": "paisley shadows",
+        "name": "paisley_shadows"
+      },
+      {
+        "code": "RCH",
+        "label": "ribbed chenille",
+        "name": "ribbed_chenille"
+      },
+      {
+        "code": "RIC",
+        "label": "ribbed cotton",
+        "name": "ribbed_cotton"
+      },
+      {
+        "code": "RIS",
+        "label": "ribbed silk",
+        "name": "ribbed_silk"
+      },
+      {
+        "code": "RMN",
+        "label": "ribbon muslin",
+        "name": "ribbon_muslin"
+      },
+      {
+        "code": "RMU",
+        "label": "ribbed muslin",
+        "name": "ribbed_muslin"
+      },
+      {
+        "code": "ROB",
+        "label": "robert",
+        "name": "robert"
+      },
+      {
+        "code": "ROS",
+        "label": "rosebud",
+        "name": "rosebud"
+      },
+      {
+        "code": "ROW",
+        "label": "rowan",
+        "name": "rowan"
+      },
+      {
+        "code": "RSP",
+        "label": "rose sprig",
+        "name": "rose_sprig"
+      },
+      {
+        "code": "RTR",
+        "label": "rose trail",
+        "name": "rose_trail"
+      },
+      {
+        "code": "SAS",
+        "label": "satin stripes",
+        "name": "satin_stripes"
+      },
+      {
+        "code": "SAT",
+        "label": "satin stripes",
+        "name": "satin_stripes"
+      },
+      {
+        "code": "SAV",
+        "label": "savernake",
+        "name": "savernake"
+      },
+      {
+        "code": "SCA",
+        "label": "scaley",
+        "name": "scaley"
+      },
+      {
+        "code": "SCS",
+        "label": "scrolly stripes",
+        "name": "scrolly_stripes"
+      },
+      {
+        "code": "SEY",
+        "label": "seymour",
+        "name": "seymour"
+      },
+      {
+        "code": "SHS",
+        "label": "shaded stripes",
+        "name": "shaded_stripes"
+      },
+      {
+        "code": "SID",
+        "label": "sidney",
+        "name": "sidney"
+      },
+      {
+        "code": "SIW",
+        "label": "silk wool plain",
+        "name": "silk_wool_plain"
+      },
+      {
+        "code": "SLI",
+        "label": "silk linen plain",
+        "name": "silk_linen_plain"
+      },
+      {
+        "code": "SOP",
+        "label": "sophia",
+        "name": "sophia"
+      },
+      {
+        "code": "SPR",
+        "label": "sprigs",
+        "name": "sprigs"
+      },
+      {
+        "code": "SOR",
+        "label": "star organza",
+        "name": "star_organza"
+      },
+      {
+        "code": "SQA",
+        "label": "squares",
+        "name": "squares"
+      },
+      {
+        "code": "SQS",
+        "label": "squares and stripes",
+        "name": "squares_and_stripes"
+      },
+      {
+        "code": "SQU",
+        "label": "squiggly",
+        "name": "squiggly"
+      },
+      {
+        "code": "SST",
+        "label": "speckled stripes",
+        "name": "speckled_stripes"
+      },
+      {
+        "code": "SWS",
+        "label": "silk wool stripes",
+        "name": "silk_wool_stripes"
+      },
+      {
+        "code": "TAL",
+        "label": "talbot",
+        "name": "talbot"
+      },
+      {
+        "code": "TEX",
+        "label": "textured wool",
+        "name": "textured_wool"
+      },
+      {
+        "code": "THY",
+        "label": "thyme",
+        "name": "thyme"
+      },
+      {
+        "code": "TOL",
+        "label": "toledo",
+        "name": "toledo"
+      },
+      {
+        "code": "TRF",
+        "label": "trefoil stripes",
+        "name": "trefoil_stripes"
+      },
+      {
+        "code": "TRI",
+        "label": "triangles",
+        "name": "triangles"
+      },
+      {
+        "code": "TSR",
+        "label": "textured stripes chenille",
+        "name": "textured_stripes_chenille"
+      },
+      {
+        "code": "UNN",
+        "label": "union stripe",
+        "name": "union_stripe"
+      },
+      {
+        "code": "VAR",
+        "label": "varied rib",
+        "name": "varied_rib"
+      },
+      {
+        "code": "WAS",
+        "label": "watery silk",
+        "name": "watery_silk"
+      },
+      {
+        "code": "WAV",
+        "label": "wavy",
+        "name": "wavy"
+      },
+      {
+        "code": "WIN",
+        "label": "winifred",
+        "name": "winifred"
+      },
+      {
+        "code": "WPM",
+        "label": "windowpane muslin",
+        "name": "windowpane_muslin"
+      },
+      {
+        "code": "WSS",
+        "label": "watery silk stripes",
+        "name": "watery_silk_stripes"
+      },
+      {
+        "code": "ZZS",
+        "label": "zig zags",
+        "name": "zig_zags"
+      },
+      {
+        "code": "561",
+        "label": "561",
+        "name": "561"
+      },
+      {
+        "code": "562",
+        "label": "562",
+        "name": "562"
+      },
+      {
+        "code": "563",
+        "label": "563",
+        "name": "563"
+      },
+      {
+        "code": "931",
+        "label": "931",
+        "name": "931"
+      },
+      {
+        "code": "932",
+        "label": "932",
+        "name": "932"
+      },
+      {
+        "code": "941",
+        "label": "941",
+        "name": "941"
+      },
+      {
+        "code": "942",
+        "label": "942",
+        "name": "942"
+      },
+      {
+        "code": "943",
+        "label": "943",
+        "name": "943"
+      },
+      {
+        "code": "951",
+        "label": "951",
+        "name": "951"
+      },
+      {
+        "code": "953",
+        "label": "953",
+        "name": "953"
+      },
+      {
+        "code": "961",
+        "label": "961",
+        "name": "961"
+      },
+      {
+        "code": "962",
+        "label": "962",
+        "name": "962"
+      },
+      {
+        "code": "963",
+        "label": "963",
+        "name": "963"
+      },
+      {
+        "code": "964",
+        "label": "964",
+        "name": "964"
+      },
+      {
+        "code": "965",
+        "label": "965",
+        "name": "965"
+      },
+      {
+        "code": "966",
+        "label": "966",
+        "name": "966"
+      },
+      {
+        "code": "967",
+        "label": "967",
+        "name": "967"
+      },
+      {
+        "code": "968",
+        "label": "968",
+        "name": "968"
+      },
+      {
+        "code": "969",
+        "label": "969",
+        "name": "969"
+      },
+      {
+        "code": "970",
+        "label": "970",
+        "name": "970"
+      },
+      {
+        "code": "971",
+        "label": "971",
+        "name": "971"
+      },
+      {
+        "code": "974",
+        "label": "974",
+        "name": "974"
+      },
+      {
+        "code": "975",
+        "label": "975",
+        "name": "975"
+      },
+      {
+        "code": "976",
+        "label": "976",
+        "name": "976"
+      }
+    ],
+
+
+    "colours": [
+      {
+        "code": "NAT",
+        "label": "natural",
+        "name": "natural"
+      },
+      {
+        "code": "APR",
+        "label": "Apricot",
+        "name": "apricot"
+      },
+      {
+        "code": "AUB",
+        "label": "Aubergine",
+        "name": "aubergine"
+      },
+      {
+        "code": "AUBBGE",
+        "label": "Aubergine/Beige",
+        "name": "aubergine/beige"
+      },
+      {
+        "code": "AUBKHA",
+        "label": "Aubergine/Khaki",
+        "name": "aubergine/khaki"
+      },
+      {
+        "code": "BCT",
+        "label": "Blackcurrant",
+        "name": "blackcurrant"
+      },
+      {
+        "code": "BGE",
+        "label": "Beige",
+        "name": "beige"
+      },
+      {
+        "code": "BGEBLU",
+        "label": "Beige/Blue",
+        "name": "beige/blue"
+      },
+      {
+        "code": "BGERED",
+        "label": "Beige/Red",
+        "name": "beige/red"
+      },
+      {
+        "code": "BGESTR",
+        "label": "Beige Stripes",
+        "name": "beige_stripes"
+      },
+      {
+        "code": "BGEWIN",
+        "label": "Beige/ Wine",
+        "name": "beige/_wine"
+      },
+      {
+        "code": "BIS",
+        "label": "Biscuit",
+        "name": "biscuit"
+      },
+      {
+        "code": "BISCRI",
+        "label": "Biscuit/Crimson",
+        "name": "biscuit/crimson"
+      },
+      {
+        "code": "BISFIG",
+        "label": "Biscuit Figured",
+        "name": "biscuit_figured"
+      },
+      {
+        "code": "BLK",
+        "label": "Black",
+        "name": "black"
+      },
+      {
+        "code": "BLKBLU",
+        "label": "Black/Blue",
+        "name": "black/blue"
+      },
+      {
+        "code": "BLKBRO",
+        "label": "Black/Brown",
+        "name": "black/brown"
+      },
+      {
+        "code": "BLKECR",
+        "label": "Black/Ecru",
+        "name": "black/ecru"
+      },
+      {
+        "code": "BLKGLD",
+        "label": "Black/Gold",
+        "name": "black/gold"
+      },
+      {
+        "code": "BLKGRN",
+        "label": "Black/Green",
+        "name": "black/green"
+      },
+      {
+        "code": "BLKGRY",
+        "label": "Black/Grey",
+        "name": "black/grey"
+      },
+      {
+        "code": "BLKMVE",
+        "label": "Black/Mauve",
+        "name": "black/mauve"
+      },
+      {
+        "code": "BLKOGD",
+        "label": "Black/Old Gold",
+        "name": "black/old_gold"
+      },
+      {
+        "code": "BLKPUR",
+        "label": "Black/Purple",
+        "name": "black/purple"
+      },
+      {
+        "code": "BLKRED",
+        "label": "Black/Red",
+        "name": "black/red"
+      },
+      {
+        "code": "BLKSDG",
+        "label": "Black/Sludge",
+        "name": "black/sludge"
+      },
+      {
+        "code": "BLKSLV",
+        "label": "Black/Silver",
+        "name": "black/silver"
+      },
+      {
+        "code": "BLKSLVGRY",
+        "label": "Black/Silver/Grey",
+        "name": "black/silver/grey"
+      },
+      {
+        "code": "BLKWIN",
+        "label": "Black/Wine",
+        "name": "black/wine"
+      },
+      {
+        "code": "BLU",
+        "label": "Blue",
+        "name": "blue"
+      },
+      {
+        "code": "BLUBRO",
+        "label": "Blue/Brown",
+        "name": "blue/brown"
+      },
+      {
+        "code": "BLUCRM",
+        "label": "Blue/Cream",
+        "name": "blue/cream"
+      },
+      {
+        "code": "BLUDRKBLU",
+        "label": "Blue/ Dark Blue",
+        "name": "blue/_dark_blue"
+      },
+      {
+        "code": "BLUFAW",
+        "label": "Blue/Fawn",
+        "name": "blue/fawn"
+      },
+      {
+        "code": "BLUFIG",
+        "label": "Blue Figured",
+        "name": "blue_figured"
+      },
+      {
+        "code": "BLUGLD",
+        "label": "Blue/Gold",
+        "name": "blue/gold"
+      },
+      {
+        "code": "BLUGRN",
+        "label": "Blue/Green",
+        "name": "blue/green"
+      },
+      {
+        "code": "BLUGRY",
+        "label": "Blue/ Grey",
+        "name": "blue/_grey"
+      },
+      {
+        "code": "BLUGRYCRM",
+        "label": "Blue/Grey/Cream",
+        "name": "blue/grey/cream"
+      },
+      {
+        "code": "BLUIVY",
+        "label": "Blue/Ivory",
+        "name": "blue/ivory"
+      },
+      {
+        "code": "BLUKHA",
+        "label": "Blue/Khaki",
+        "name": "blue/khaki"
+      },
+      {
+        "code": "BLUTPE",
+        "label": "Blue/Taupe",
+        "name": "blue/taupe"
+      },
+      {
+        "code": "BLUWIN",
+        "label": "Blue/Wine",
+        "name": "blue/wine"
+      },
+      {
+        "code": "BRAFIG",
+        "label": "Brass Figured",
+        "name": "brass_figured"
+      },
+      {
+        "code": "BRK",
+        "label": "Bark",
+        "name": "bark"
+      },
+      {
+        "code": "BRNRED",
+        "label": "Brown/Red",
+        "name": "brown/red"
+      },
+      {
+        "code": "BRO",
+        "label": "Brown",
+        "name": "brown"
+      },
+      {
+        "code": "BROBLU",
+        "label": "Brown/Blue",
+        "name": "brown/blue"
+      },
+      {
+        "code": "BROBRZ",
+        "label": "Brown/Bronze",
+        "name": "brown/bronze"
+      },
+      {
+        "code": "BROLIL",
+        "label": "Brown/Lilac",
+        "name": "brown/lilac"
+      },
+      {
+        "code": "BROPNK",
+        "label": "Brown/Pink",
+        "name": "brown/pink"
+      },
+      {
+        "code": "BROWIN",
+        "label": "Brown/Wine",
+        "name": "brown/wine"
+      },
+      {
+        "code": "BRZ",
+        "label": "Bronze",
+        "name": "bronze"
+      },
+      {
+        "code": "BSH",
+        "label": "Blackish",
+        "name": "blackish"
+      },
+      {
+        "code": "CCCGRY",
+        "label": "Clerical Grey",
+        "name": "clerical_grey"
+      },
+      {
+        "code": "CHL",
+        "label": "Charcoal",
+        "name": "charcoal"
+      },
+      {
+        "code": "CHLBLK",
+        "label": "Charcoal/Black",
+        "name": "charcoal/black"
+      },
+      {
+        "code": "CHLMVE",
+        "label": "Charcoal/Mauve",
+        "name": "charcoal/mauve"
+      },
+      {
+        "code": "CHLOYS",
+        "label": "Charcoal/Oyster",
+        "name": "charcoal/oyster"
+      },
+      {
+        "code": "CHO",
+        "label": "Chocolate",
+        "name": "chocolate"
+      },
+      {
+        "code": "CHOBLU",
+        "label": "Chocolate/Blue",
+        "name": "chocolate/blue"
+      },
+      {
+        "code": "CIN",
+        "label": "Cinnamon",
+        "name": "cinnamon"
+      },
+      {
+        "code": "CRL",
+        "label": "Coral",
+        "name": "coral"
+      },
+      {
+        "code": "CRM",
+        "label": "Cream",
+        "name": "cream"
+      },
+      {
+        "code": "CRMBLU",
+        "label": "Cream/Blue",
+        "name": "cream/blue"
+      },
+      {
+        "code": "CRMBLUPNK",
+        "label": "Cream/Blue/Pink",
+        "name": "cream/blue/pink"
+      },
+      {
+        "code": "CRMGLD",
+        "label": "Cream/Gold",
+        "name": "cream/gold"
+      },
+      {
+        "code": "CRMGRN",
+        "label": "Cream/Green",
+        "name": "cream/green"
+      },
+      {
+        "code": "CRMPNK",
+        "label": "Cream/Pink",
+        "name": "cream/pink"
+      },
+      {
+        "code": "DRKBLU",
+        "label": "Dark Blue",
+        "name": "dark_blue"
+      },
+      {
+        "code": "DRKBRN",
+        "label": "Mistake?",
+        "name": "mistake?"
+      },
+      {
+        "code": "DRKBRO",
+        "label": "Dark Brown",
+        "name": "dark_brown"
+      },
+      {
+        "code": "DRKFIG",
+        "label": "Dark Figured",
+        "name": "dark_figured"
+      },
+      {
+        "code": "DRKGLD",
+        "label": "Dark Gold",
+        "name": "dark_gold"
+      },
+      {
+        "code": "DRKGRN",
+        "label": "Dark Green",
+        "name": "dark_green"
+      },
+      {
+        "code": "DRKGRY",
+        "label": "Dark Grey",
+        "name": "dark_grey"
+      },
+      {
+        "code": "DRKKHA",
+        "label": "Dark Khaki",
+        "name": "dark_khaki"
+      },
+      {
+        "code": "DRKRED",
+        "label": "Dark Red",
+        "name": "dark_red"
+      },
+      {
+        "code": "DRKSLV",
+        "label": "Dark Silver",
+        "name": "dark_silver"
+      },
+      {
+        "code": "DRKWIN",
+        "label": "Dark Wine",
+        "name": "dark_wine"
+      },
+      {
+        "code": "ECRAPR",
+        "label": "Ecru/Apricot",
+        "name": "ecru/apricot"
+      },
+      {
+        "code": "ECRBRO",
+        "label": "Ecru/Brown",
+        "name": "ecru/brown"
+      },
+      {
+        "code": "ECRKHA",
+        "label": "Ecru/Khaki",
+        "name": "ecru/khaki"
+      },
+      {
+        "code": "ECRRED",
+        "label": "Ecru/Red",
+        "name": "ecru/red"
+      },
+      {
+        "code": "ECRRST",
+        "label": "Ecru/Rust",
+        "name": "ecru/rust"
+      },
+      {
+        "code": "FAW",
+        "label": "Fawn",
+        "name": "fawn"
+      },
+      {
+        "code": "FAWAPR",
+        "label": "Fawn/Apricot",
+        "name": "fawn/apricot"
+      },
+      {
+        "code": "FAWONG",
+        "label": "Fawn/Orange",
+        "name": "fawn/orange"
+      },
+      {
+        "code": "FAWRST",
+        "label": "Fawn/Rust",
+        "name": "fawn/rust"
+      },
+      {
+        "code": "FFFWHI",
+        "label": "Fine Muslin White",
+        "name": "fine_muslin_white"
+      },
+      {
+        "code": "GLD",
+        "label": "Gold",
+        "name": "gold"
+      },
+      {
+        "code": "GLDBLK",
+        "label": "Gold/Black",
+        "name": "gold/black"
+      },
+      {
+        "code": "GLDRED",
+        "label": "Gold/Red",
+        "name": "gold/red"
+      },
+      {
+        "code": "GRN",
+        "label": "Green",
+        "name": "green"
+      },
+      {
+        "code": "GRNBLK",
+        "label": "Green/Black",
+        "name": "green/black"
+      },
+      {
+        "code": "GRNBLU",
+        "label": "Green/Blu",
+        "name": "green/blu"
+      },
+      {
+        "code": "GRNCRM",
+        "label": "Greeny Cream",
+        "name": "greeny_cream"
+      },
+      {
+        "code": "GRNGRY",
+        "label": "Greeny Grey",
+        "name": "greeny_grey"
+      },
+      {
+        "code": "GRNOGD",
+        "label": "Green/Old Gold",
+        "name": "green/old_gold"
+      },
+      {
+        "code": "GRNPNK",
+        "label": "Green/Pink",
+        "name": "green/pink"
+      },
+      {
+        "code": "GRNRED",
+        "label": "Green/Red",
+        "name": "green/red"
+      },
+      {
+        "code": "GRNWIN",
+        "label": "Green/Wine",
+        "name": "green/wine"
+      },
+      {
+        "code": "GRY",
+        "label": "Grey",
+        "name": "grey"
+      },
+      {
+        "code": "GRYBLU",
+        "label": "Grey/Blue",
+        "name": "grey/blue"
+      },
+      {
+        "code": "GRYBRO",
+        "label": "Grey/Brown",
+        "name": "grey/brown"
+      },
+      {
+        "code": "GRYCRM",
+        "label": "Grey/Cream",
+        "name": "grey/cream"
+      },
+      {
+        "code": "GRYGLD",
+        "label": "Grey/Gold",
+        "name": "grey/gold"
+      },
+      {
+        "code": "GRYGRN",
+        "label": "Grey/Green",
+        "name": "grey/green"
+      },
+      {
+        "code": "GRYGRP",
+        "label": "Grey/Grape",
+        "name": "grey/grape"
+      },
+      {
+        "code": "GRYKHA",
+        "label": "Grey/Khaki",
+        "name": "grey/khaki"
+      },
+      {
+        "code": "GRYLIL",
+        "label": "Grey/Lilac",
+        "name": "grey/lilac"
+      },
+      {
+        "code": "GRYMVE",
+        "label": "Grey/Mauve",
+        "name": "grey/mauve"
+      },
+      {
+        "code": "GRYPLM",
+        "label": "Grey/Plum",
+        "name": "grey/plum"
+      },
+      {
+        "code": "GRYPNK",
+        "label": "Grey/Pink",
+        "name": "grey/pink"
+      },
+      {
+        "code": "GRYRED",
+        "label": "Grey/Red",
+        "name": "grey/red"
+      },
+      {
+        "code": "GRYWIN",
+        "label": "Grey/Wine",
+        "name": "grey/wine"
+      },
+      {
+        "code": "GSH",
+        "label": "Greyish",
+        "name": "greyish"
+      },
+      {
+        "code": "HVYBLK",
+        "label": "Heavyweight Black",
+        "name": "heavyweight_black"
+      },
+      {
+        "code": "HVYCRM",
+        "label": "Heavyweight Cream",
+        "name": "heavyweight_cream"
+      },
+      {
+        "code": "HVYGRN",
+        "label": "Heavyweight Green",
+        "name": "heavyweight_green"
+      },
+      {
+        "code": "HVYIVY",
+        "label": "Heavyweight Ivory",
+        "name": "heavyweight_ivory"
+      },
+      {
+        "code": "HVYPUR",
+        "label": "Heavyweight Purple",
+        "name": "heavyweight_purple"
+      },
+      {
+        "code": "HVYRED",
+        "label": "Heavyweight Red",
+        "name": "heavyweight_red"
+      },
+      {
+        "code": "IND",
+        "label": "Indigo",
+        "name": "indigo"
+      },
+      {
+        "code": "IVY",
+        "label": "Ivory",
+        "name": "ivory"
+      },
+      {
+        "code": "IVYBLK",
+        "label": "Ivory/Black",
+        "name": "ivory/black"
+      },
+      {
+        "code": "IVYBLU",
+        "label": "Ivory/Blue",
+        "name": "ivory/blue"
+      },
+      {
+        "code": "IVYBLUSTR",
+        "label": "Ivory/Blue Stripes",
+        "name": "ivory/blue_stripes"
+      },
+      {
+        "code": "IVYCRL",
+        "label": "Ivory/Coral",
+        "name": "ivory/coral"
+      },
+      {
+        "code": "IVYGLD",
+        "label": "Ivory/Gold",
+        "name": "ivory/gold"
+      },
+      {
+        "code": "IVYGRY",
+        "label": "Ivory/Grey",
+        "name": "ivory/grey"
+      },
+      {
+        "code": "IVYIVY",
+        "label": "Ivory/Ivory",
+        "name": "ivory/ivory"
+      },
+      {
+        "code": "IVYOGD",
+        "label": "Ivory/Old Gold",
+        "name": "ivory/old_gold"
+      },
+      {
+        "code": "IVYRED",
+        "label": "Ivory/Red",
+        "name": "ivory/red"
+      },
+      {
+        "code": "IVYSLV",
+        "label": "Ivory/Silver",
+        "name": "ivory/silver"
+      },
+      {
+        "code": "IVYTPE",
+        "label": "Ivory/Taupe",
+        "name": "ivory/taupe"
+      },
+      {
+        "code": "KHA",
+        "label": "Khaki",
+        "name": "khaki"
+      },
+      {
+        "code": "KHABLU",
+        "label": "Khaki/Blue",
+        "name": "khaki/blue"
+      },
+      {
+        "code": "KHAGRY",
+        "label": "Khaki/Grey",
+        "name": "khaki/grey"
+      },
+      {
+        "code": "KHAPLM",
+        "label": "Khaki/Plum",
+        "name": "khaki/plum"
+      },
+      {
+        "code": "KHAWIN",
+        "label": "Khaki/Wine",
+        "name": "khaki/wine"
+      },
+      {
+        "code": "KIWBLU",
+        "label": "Kiwi/Blue",
+        "name": "kiwi/blue"
+      },
+      {
+        "code": "KIWDRKGRN",
+        "label": "Kiwi/dark Green",
+        "name": "kiwi/dark_green"
+      },
+      {
+        "code": "KIWIPLM",
+        "label": "Kiwi/Plum",
+        "name": "kiwi/plum"
+      },
+      {
+        "code": "KIWPNK",
+        "label": "Kiwi/Pink",
+        "name": "kiwi/pink"
+      },
+      {
+        "code": "LIL",
+        "label": "Lilac",
+        "name": "lilac"
+      },
+      {
+        "code": "LTEBLK",
+        "label": "Lightweight Black",
+        "name": "lightweight_black"
+      },
+      {
+        "code": "LTEBLU",
+        "label": "Lightweight Blue",
+        "name": "lightweight_blue"
+      },
+      {
+        "code": "LTECRM",
+        "label": "Lightweight Cream",
+        "name": "lightweight_cream"
+      },
+      {
+        "code": "LTEIVY",
+        "label": "Lightweight Ivory",
+        "name": "lightweight_ivory"
+      },
+      {
+        "code": "MEDBLUSTR",
+        "label": "Medium Blue Stripes",
+        "name": "medium_blue_stripes"
+      },
+      {
+        "code": "MEDGRYSTR",
+        "label": "Medium Grey Stripes",
+        "name": "medium_grey_stripes"
+      },
+      {
+        "code": "MRM",
+        "label": "Mushroom",
+        "name": "mushroom"
+      },
+      {
+        "code": "MUL",
+        "label": "Multi",
+        "name": "multi"
+      },
+      {
+        "code": "MVE",
+        "label": "Mauve",
+        "name": "mauve"
+      },
+      {
+        "code": "MVEBGE",
+        "label": "Mauve/Beige",
+        "name": "mauve/beige"
+      },
+      {
+        "code": "NARGRYSTR",
+        "label": "Narrow Grey Stripes",
+        "name": "narrow_grey_stripes"
+      },
+      {
+        "code": "NAT",
+        "label": "Natural",
+        "name": "natural"
+      },
+      {
+        "code": "NATBLK",
+        "label": "Natural/Black",
+        "name": "natural/black"
+      },
+      {
+        "code": "NATBLU",
+        "label": "Natural/Blue",
+        "name": "natural/blue"
+      },
+      {
+        "code": "NATCHL",
+        "label": "Natural/Charcoal",
+        "name": "natural/charcoal"
+      },
+      {
+        "code": "NATFIG",
+        "label": "Natural Figured",
+        "name": "natural_figured"
+      },
+      {
+        "code": "NATGLDSTR",
+        "label": "Natural/Gold Stripes",
+        "name": "natural/gold_stripes"
+      },
+      {
+        "code": "NATRED",
+        "label": "Natural/Red",
+        "name": "natural/red"
+      },
+      {
+        "code": "NATSLVSTR",
+        "label": "Natural/Silver Stripes",
+        "name": "natural/silver_stripes"
+      },
+      {
+        "code": "OGD",
+        "label": "Old Gold",
+        "name": "old_gold"
+      },
+      {
+        "code": "OGDBLK",
+        "label": "Old Gold/Black",
+        "name": "old_gold/black"
+      },
+      {
+        "code": "OGDSLV",
+        "label": "Old Gold/Silver",
+        "name": "old_gold/silver"
+      },
+      {
+        "code": "OLV",
+        "label": "Olive",
+        "name": "olive"
+      },
+      {
+        "code": "OYS",
+        "label": "Oyster",
+        "name": "oyster"
+      },
+      {
+        "code": "PCHKHA",
+        "label": "Peach/Khaki",
+        "name": "peach/khaki"
+      },
+      {
+        "code": "PLEBLU",
+        "label": "Pale Blue",
+        "name": "pale_blue"
+      },
+      {
+        "code": "PLEBLUBGE",
+        "label": "Pale Blue/Beige",
+        "name": "pale_blue/beige"
+      },
+      {
+        "code": "PLEBLUCRM",
+        "label": "Pale Blue/Cream",
+        "name": "pale_blue/cream"
+      },
+      {
+        "code": "PLEBLUIVY",
+        "label": "Pale Blue/Ivory",
+        "name": "pale_blue/ivory"
+      },
+      {
+        "code": "PLEBLUPNK",
+        "label": "Pale Blue/Pink",
+        "name": "pale_blue/pink"
+      },
+      {
+        "code": "PLEBLUSLV",
+        "label": "Pale Blue/Silver",
+        "name": "pale_blue/silver"
+      },
+      {
+        "code": "PLEFIG",
+        "label": "Pale Figured",
+        "name": "pale_figured"
+      },
+      {
+        "code": "PLEGLD",
+        "label": "Pale Gold",
+        "name": "pale_gold"
+      },
+      {
+        "code": "PLEGRN",
+        "label": "Pale Green",
+        "name": "pale_green"
+      },
+      {
+        "code": "PLEGRNBGE",
+        "label": "Pale Green/Beige",
+        "name": "pale_green/beige"
+      },
+      {
+        "code": "PLEGRY",
+        "label": "Pale Grey",
+        "name": "pale_grey"
+      },
+      {
+        "code": "PLEGRYFIG",
+        "label": "Pale Grey Figured",
+        "name": "pale_grey_figured"
+      },
+      {
+        "code": "PLEGRYGLD",
+        "label": "Pale Grey/Gold",
+        "name": "pale_grey/gold"
+      },
+      {
+        "code": "PLESLV",
+        "label": "Pale Silver",
+        "name": "pale_silver"
+      },
+      {
+        "code": "PLMGRN",
+        "label": "Plum/Green",
+        "name": "plum/green"
+      },
+      {
+        "code": "PNK",
+        "label": "Pink",
+        "name": "pink"
+      },
+      {
+        "code": "PNKCHO",
+        "label": "Pink/Chocolate",
+        "name": "pink/chocolate"
+      },
+      {
+        "code": "PNKFIG",
+        "label": "Pink Figured",
+        "name": "pink_figured"
+      },
+      {
+        "code": "PNKKHA",
+        "label": "Pink/Khaki",
+        "name": "pink/khaki"
+      },
+      {
+        "code": "PPPBLU",
+        "label": "Petrol Blue",
+        "name": "petrol_blue"
+      },
+      {
+        "code": "PRL",
+        "label": "Pearl",
+        "name": "pearl"
+      },
+      {
+        "code": "PRLPNK",
+        "label": "Pearl/Pink",
+        "name": "pearl/pink"
+      },
+      {
+        "code": "PUR",
+        "label": "Purple",
+        "name": "purple"
+      },
+      {
+        "code": "PURBLK",
+        "label": "Purple/Black",
+        "name": "purple/black"
+      },
+      {
+        "code": "PURBLU",
+        "label": "Purple/Blue",
+        "name": "purple/blue"
+      },
+      {
+        "code": "PURGRN",
+        "label": "Purple/Green",
+        "name": "purple/green"
+      },
+      {
+        "code": "RED",
+        "label": "Red",
+        "name": "red"
+      },
+      {
+        "code": "REDBLK",
+        "label": "Red/Black",
+        "name": "red/black"
+      },
+      {
+        "code": "REDBLU",
+        "label": "Red/Blue",
+        "name": "red/blue"
+      },
+      {
+        "code": "REDBRO",
+        "label": "Red/Brown",
+        "name": "red/brown"
+      },
+      {
+        "code": "REDFAW",
+        "label": "Red/Fawn",
+        "name": "red/fawn"
+      },
+      {
+        "code": "REDGLD",
+        "label": "Red/Gold",
+        "name": "red/gold"
+      },
+      {
+        "code": "REDGLDBLK",
+        "label": "Red/Gold/Black",
+        "name": "red/gold/black"
+      },
+      {
+        "code": "REDKHA",
+        "label": "Red/Khaki",
+        "name": "red/khaki"
+      },
+      {
+        "code": "REDOGD",
+        "label": "Red/Old Gold",
+        "name": "red/old_gold"
+      },
+      {
+        "code": "RHU",
+        "label": "Rhubarb",
+        "name": "rhubarb"
+      },
+      {
+        "code": "RSB",
+        "label": "Raspberry",
+        "name": "raspberry"
+      },
+      {
+        "code": "RST",
+        "label": "Rust",
+        "name": "rust"
+      },
+      {
+        "code": "RSTBGE",
+        "label": "Rust/Beige",
+        "name": "rust/beige"
+      },
+      {
+        "code": "RSTWIN",
+        "label": "Rust/Wine",
+        "name": "rust/wine"
+      },
+      {
+        "code": "SAN",
+        "label": "Sandstone",
+        "name": "sandstone"
+      },
+      {
+        "code": "SANCRM",
+        "label": "Sandstone/Cream",
+        "name": "sandstone/cream"
+      },
+      {
+        "code": "SANGRY",
+        "label": "Sandstone/Grey",
+        "name": "sandstone/grey"
+      },
+      {
+        "code": "SEAGRN",
+        "label": "Sea Green",
+        "name": "sea_green"
+      },
+      {
+        "code": "SLT",
+        "label": "Scarlet",
+        "name": "scarlet"
+      },
+      {
+        "code": "SLVGRY",
+        "label": "Silver/Grey",
+        "name": "silver/grey"
+      },
+      {
+        "code": "SLVGRYBLK",
+        "label": "Silver/Grey/Black",
+        "name": "silver/grey/black"
+      },
+      {
+        "code": "SLVMVE",
+        "label": "Silver/Mauve",
+        "name": "silver/mauve"
+      },
+      {
+        "code": "SPABLU",
+        "label": "Sepia/Blue",
+        "name": "sepia/blue"
+      },
+      {
+        "code": "STLBLU",
+        "label": "Steel/Blue",
+        "name": "steel/blue"
+      },
+      {
+        "code": "STLBRO",
+        "label": "Steel/Brown",
+        "name": "steel/brown"
+      },
+      {
+        "code": "STLNAT",
+        "label": "Steel/Natural",
+        "name": "steel/natural"
+      },
+      {
+        "code": "STN",
+        "label": "Stone",
+        "name": "stone"
+      },
+      {
+        "code": "TEA",
+        "label": "Teal",
+        "name": "teal"
+      },
+      {
+        "code": "VIO",
+        "label": "Violet",
+        "name": "violet"
+      },
+      {
+        "code": "WHI",
+        "label": "White",
+        "name": "white"
+      },
+      {
+        "code": "WHIBLK",
+        "label": "White/Black",
+        "name": "white/black"
+      },
+      {
+        "code": "WHIBLU",
+        "label": "White/Blue",
+        "name": "white/blue"
+      },
+      {
+        "code": "WHIGLD",
+        "label": "White/Gold",
+        "name": "white/gold"
+      },
+      {
+        "code": "WHISLV",
+        "label": "White/Silver",
+        "name": "white/silver"
+      },
+      {
+        "code": "WIN",
+        "label": "Wine",
+        "name": "wine"
+      },
+      {
+        "code": "WINBLK",
+        "label": "Wine/Black",
+        "name": "wine/black"
+      },
+      {
+        "code": "WINBRO",
+        "label": "Wine/Brown",
+        "name": "wine/brown"
+      },
+      {
+        "code": "WINCIN",
+        "label": "Wine/Cinnamon",
+        "name": "wine/cinnamon"
+      },
+      {
+        "code": "WINCRM",
+        "label": "Wine/Cream",
+        "name": "wine/cream"
+      },
+      {
+        "code": "WINKHA",
+        "label": "Wine/Khaki",
+        "name": "wine/khaki"
+      },
+      {
+        "code": "WINOGD",
+        "label": "Wine/Old Gold",
+        "name": "wine/old_gold"
+      },
+      {
+        "code": "WINOLV",
+        "label": "Wine/Olive",
+        "name": "wine/olive"
+      },
+      {
+        "code": "WINSTR",
+        "label": "Wine Stripes",
+        "name": "wine_stripes"
+      },
+      {
+        "code": "YEL",
+        "label": "Yellow",
+        "name": "yellow"
+      }
+    ]  },
+
+  "nav_items" : [
+
+    {
+      "label" : "silk",
+      "uri" : "catalogue:silk"
+    },
+    {
+      "label" : "cotton",
+      "uri" : "catalogue:cotton"
+    },
+    {
+      "label" : "linen",
+      "uri" : "catalogue:linen"
+    },
+    {
+      "label" : "wool",
+      "uri" : "catalogue:wool"
+    },
+    {
+      "label" : "lace",
+      "uri" : "catalogue:lace"
+    },
+    {
+      "label" : "sundries",
+      "uri" : "sundries"
+    }
+  ],
+
+
+  "colours" : [
+
+    {
+      "white" : {
+        "label" : "white",
+        "uid" : "white"
+      }
+    }
+  ,
+    {
+      "ecru" : {
+        "label" : "ecru",
+        "uid" : "ecru"
+      }
+    }
+  ,
+    {
+      "green" : {
+        "label" : "green",
+        "uid" : "green"
+      }
+    }
+  ,
+    {
+      "grey" : {
+        "label" : "grey",
+        "uid" : "grey"
+      }
+    }
+  ,
+    {
+      "brown" : {
+        "label" : "brown",
+        "uid" : "brown"
+      }
+    }
+  ,
+    {
+      "gold" : {
+        "label" : "gold",
+        "uid" : "gold"
+      }
+    }
+  ,
+    {
+      "ivory" : {
+        "label" : "ivory",
+        "uid" : "ivory"
+      }
+    }
+  ,
+    {
+      "pink" : {
+        "label" : "pink",
+        "uid" : "pink"
+      }
+    }
+  ,
+    {
+      "apricot" : {
+        "label" : "apricot",
+        "uid" : "apricot"
+      }
+    }
+  ,
+    {
+      "red" : {
+        "label" : "red",
+        "uid" : "red"
+      }
+    }
+  ,
+    {
+      "purple" : {
+        "label" : "purple",
+        "uid" : "purple"
+      }
+    }
+  ,
+    {
+      "silver" : {
+        "label" : "silver",
+        "uid" : "silver"
+      }
+    }
+  ,
+    {
+      "natural" : {
+        "label" : "natural",
+        "uid" : "natural"
+      }
+    }
+  ,
+    {
+      "yellow" : {
+        "label" : "yellow",
+        "uid" : "yellow"
+      }
+    }
+  ,
+    {
+      "blue" : {
+        "label" : "blue",
+        "uid" : "blue"
+      }
+    }
+  ,
+    {
+      "wine" : {
+        "label" : "wine",
+        "uid" : "wine"
+      }
+    }
+  ,
+    {
+      "black" : {
+        "label" : "black",
+        "uid" : "black"
+      }
+    }
+  ,
+    {
+      "metallic" : {
+        "label" : "metallic",
+        "uid" : "metallic"
+      }
+    }
+
+
+  ]
+}

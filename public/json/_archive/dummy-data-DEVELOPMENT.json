@@ -1,0 +1,448 @@
+{
+  "designs" : [
+
+    {
+      "eustace" : {
+
+        "friendly_name" : "eustace",
+        "default_product_code" : "SILDAM/EUS/BLU",
+
+        "variations" : [
+
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/EUS/IVYGLD",
+            "tags" : "Silk, Damask, Ivory, Gold, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/EUS/BLU",
+            "tags" : "Silk, Damask,Blue",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/EUS/BLUGRN",
+            "tags" : "Silk, Damask,Blue, Green",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/EUS/REDBLK",
+            "tags" : "Silk, Damask, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILWOO/EUS/REDBRO",
+            "tags" : "Silk, Wool, Red, Brown",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILWOO/EUS/PURBLK",
+            "tags" : "Silk, Wool, Purple, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILWOO/EUS/BLK",
+            "tags" : "Silk, Wool, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+        ]
+      }
+    }
+  ,
+    {
+      "chancery" : {
+
+        "friendly_name" : "chancery",
+        "default_product_code" : "SILDAM/CHA/PURBLK",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/CHA/IVY",
+            "tags" : "Silk, Damask, Ivory",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/IVYGLD",
+            "tags" : "Silk, Damask, Ivory, Gold, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/IVY",
+            "tags" : "Silk, Damask, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/PURBLK",
+            "tags" : "Silk, Damask, Purple, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/PURBLU",
+            "tags" : "Silk, Damask, Purple, Blue",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/BLKSLV",
+            "tags" : "Silk, Damask, Black, Silver, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CHA/BLKGLD",
+            "tags" : "Silk, Damask, Black, Gold, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILCOT/CHA/BLK",
+            "tags" : "Silk, Cotton, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+        ]
+      }
+    }
+  ,
+    {
+      "lombard" : {
+
+        "friendly_name" : "lombard",
+        "default_product_code" : "SILDAM/LOM/GRNRED",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/LOM/GRNRED",
+            "tags" : "Silk, Damask, Green, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/LOM/REDBLU",
+            "tags" : "Silk, Damask, Red, Blue",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+
+
+        ]
+      }
+    }
+  ,
+    {
+      "cosimo" : {
+
+        "friendly_name" : "cosimo",
+        "default_product_code" : "SILDAM/CSM/BLU",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/CSM/BLU",
+            "tags" : "Silk, Damask, Blue",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CSM/GRNBLK",
+            "tags" : "Silk, Damask, Green",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CSM/REDBLK",
+            "tags" : "Silk, Damask, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CSM/PURGRN",
+            "tags" : "Silk, Damask, Purple, Green",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/CSM/PURBLK",
+            "tags" : "Silk, Damask, Purple, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILWOO/CSM/BLK",
+            "tags" : "Silk, Wool, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+        ]
+      }
+    }
+  ,
+    {
+      "percyval" : {
+
+        "friendly_name" : "percyval",
+        "default_product_code" : "SILDAM/PER/IVY",
+
+        "variations" : [
+
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/PER/IVY",
+            "tags" : "Silk, Damask, Ivory",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/PER/REDBLK",
+            "tags" : "Silk, Damask, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/PER/PURBLK",
+            "tags" : "Silk, Damask, Purple, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILLIN/PER/BLK",
+            "tags" : "Silk, Linen, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+
+
+
+
+
+        ]
+      }
+    }
+  ,
+    {
+      "bargello" : {
+
+        "friendly_name" : "bargello",
+        "default_product_code" : "SILDAM/BAR/IVYGLD",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/BAR/IVYGLD",
+            "tags" : "Silk, Damask, Ivory, Gold, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/BAR/REDGLD",
+            "tags" : "Silk, Damask, Red, Gold",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/BAR/GRNBLK",
+            "tags" : "Silk, Damask, Red, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+
+
+
+        ]
+      }
+    }
+  ,
+    {
+      "sidney" : {
+
+        "friendly_name" : "sidney",
+        "default_product_code" : "SILDAM/PER/IVY",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILDAM/SID/IVYGLD",
+            "tags" : "Silk, Damask, Ivory, Gold, Metallic",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/SID/REDGLD",
+            "tags" : "Silk, Damask, Red, Gold",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "SILWOO/SID/REDBRO",
+            "tags" : "Silk, Wool, Red, Brown",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/SID/REDBLK",
+            "tags" : "Silk, Damask, Red",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "SILDAM/SID/BLK",
+            "tags" : "Silk, Damask, Black",
+            "details" : {
+              "width" : "48''/120 cms"
+            }
+          }
+        ]
+      }
+    }
+  ,
+    {
+      "indian_checked_cotton" : {
+
+        "friendly_name" : "indian checked cotton",
+        "default_product_code" : "COT/ICC/WHI",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "COT/ICC/WHI",
+            "tags" : "Cotton, White",
+            "details" : {
+              "width" : "35''/90cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "COT/ICC/MRM",
+            "tags" : "Cotton, Brown",
+            "details" : {
+              "width" : "35''/90cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "COT/ICC/RED",
+            "tags" : "Cotton, Red",
+            "details" : {
+              "width" : "35''/90cms"
+            }
+          }
+        ]
+      }
+    }
+  ,
+    {
+      "indian_striped_cotton" : {
+
+        "friendly_name" : "indian striped cotton",
+        "default_product_code" : "",
+
+        "variations" : [
+          {
+            "default_by_fabric_type" : true,
+            "code" : "COT/INS/GRY",
+            "tags" : "Cotton, Grey",
+            "details" : {
+              "colour" : "narrow grey stripes",
+              "width" : "43''/110 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : true,
+            "code" : "COT/IMS/GRY",
+            "tags" : "Cotton, Grey",
+            "details" : {
+              "colour" : "medium grey stripes",
+              "width" : "43''/110 cms"
+            }
+          },
+          {
+            "default_by_fabric_type" : false,
+            "code" : "COT/IMS/BLU",
+            "tags" : "Cotton, Blue",
+            "details" : {
+              "colour" : "medium grey stripes",
+              "width" : "43''/110 cms"
+            }
+          }
+
+        ]
+      }
+    }
+
+  ]
+}

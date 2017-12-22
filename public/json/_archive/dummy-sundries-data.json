@@ -1,0 +1,72 @@
+{
+  "items" : [
+
+    {
+      "date" : "20 May 2016",
+
+      "images" : [
+        "dummy-sundries-1.jpg"
+      ],
+
+      "text" : {
+        "headline" : "Headline copy goes here",
+        "copy" : "Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here.<br/>...<br/>You can add line breaks<br/>...<br/>And links: <a href='/'>Copy lines go here</a>.<br/>And lists: <ul><li>copy</li><li>lines</li><li>go</li><li>here</li></ul><br/>You have to be a bit careful doing this though..."
+      }
+    },
+
+    {
+      "date" : "20 May 2016",
+
+      "images" : [
+        "dummy-sundries-2.jpg"
+      ],
+
+      "text" : {
+        "headline" : "Headline copy goes here",
+        "copy" : "Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here."
+      }
+    },
+
+    {
+      "date" : "20 May 2016",
+
+      "images" : [
+        "dummy-sundries-1.jpg",
+        "dummy-sundries-2.jpg"
+      ],
+
+      "text" : {
+        "headline" : "Headline copy goes here",
+        "copy" : "Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here."
+      }
+    },
+
+    {
+      "date" : "20 May 2016",
+
+      "images" : [
+        "dummy-sundries-1.jpg"
+      ],
+
+      "text" : {
+        "headline" : "Headline copy goes here",
+        "copy" : "Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here."
+      }
+    },
+
+    {
+      "date" : "20 May 2016",
+
+      "images" : [
+        "dummy-sundries-1.jpg"
+      ],
+
+      "text" : {
+        "headline" : "Headline copy goes here",
+        "copy" : "Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here. Copy lines go here."
+      }
+    }
+
+
+  ]
+}
