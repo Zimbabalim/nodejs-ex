@@ -1,8 +1,8 @@
 //  OpenShift sample Node application
 // @as : adapt for hopkins
 var express = require('express'),
-    app     = express();
-    //morgan  = require('morgan'); // @as removed
+    app     = express(),
+    morgan  = require('morgan'); // @as removed
 
 // @as
 var fs = require( "fs" );
