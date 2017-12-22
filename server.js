@@ -7,7 +7,7 @@ var express = require('express'),
 // @as
 var fs = require( "fs" );
 var path = require( "path" );
-// var routes = require( "./routes/index" ); // RESTORE
+var routes = require( "./routes/index" ); // RESTORE
 var mongo = require('mongodb');
 var monk = require('monk');
 var bb = require('express-busboy');
@@ -25,7 +25,7 @@ bb.extend( app, {
     upload : true,
     path: "./public/_upload-temp"
 } );*/ // RESTORE
-// app.use( "/", routes); // @as removed RESTORE
+app.use( "/", routes); // @as removed RESTORE
 // ===
 
 
