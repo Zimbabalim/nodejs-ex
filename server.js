@@ -17,7 +17,7 @@ console.log('/server/ - >>');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
-//app.use(morgan('combined')); @as removed
+app.use(morgan('combined')); //@as removed
 
 // @as added
 app.use( express.static( path.join( __dirname, "public" )));
@@ -25,7 +25,7 @@ bb.extend( app, {
     upload : true,
     path: "./public/_upload-temp"
 } );
-app.use( "/", routes);
+// app.use( "/", routes); // @as removed RESTORE
 // ===
 
 
