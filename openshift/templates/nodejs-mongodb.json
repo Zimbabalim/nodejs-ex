@@ -507,7 +507,7 @@
       "name": "DATABASE_NAME",
       "displayName": "Database Name",
       "required": true,
-      "value": "sampledb"
+      "value": "staging"
     },
     {
       "name": "DATABASE_ADMIN_PASSWORD",

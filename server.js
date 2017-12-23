@@ -39,7 +39,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
         mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
         mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
         mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
-        mongoPassword = process.env[mongoServiceName + '_PASSWORD']
+        mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
     mongoUser = process.env[mongoServiceName + '_USER'];
 
     if (mongoHost && mongoPort && mongoDatabase) {
@@ -58,8 +58,8 @@ var db = null,
 
 var initDb = function(callback) {
 
-    console.log('/server/ -initDb --disable db connect');
-    return; // REMOVE - TEST disable db connect
+    // console.log('/server/ -initDb --disable db connect');
+    // return; // REMOVE - TEST disable db connect
 
     if (mongoURL == null) return;
 
