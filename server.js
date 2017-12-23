@@ -61,11 +61,18 @@ var initDb = function(callback) {
     // console.log('/server/ -initDb --disable db connect');
     // return; // REMOVE - TEST disable db connect
 
-    if (mongoURL == null) return;
+    console.log('/server/ -initDb --mongoURL:', mongoURL);
+
+    if (mongoURL == null) {
+        return;
+    }
 
     var mongodb = require('mongodb');
+
+    console.log('/server/ -initDb', mongodb);
     if (mongodb == null) return;
 
+    console.log('/server/ -initDb --attempt connect');
     mongodb.connect(mongoURL, function(err, conn) {
         if (err) {
             callback(err);
@@ -77,6 +84,7 @@ var initDb = function(callback) {
         dbDetails.url = mongoURLLabel;
         dbDetails.type = 'MongoDB';
 
+        console.log('/server/ -CONNECT?', dbDetails);
         console.log('Connected to MongoDB at: %s', mongoURL);
     });
 };
