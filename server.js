@@ -39,20 +39,20 @@ console.log('/server/ -process.env.OPENSHIFT_MONGODB_DB_URL:', process.env.OPENS
 if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
 
     /* ORIGINAL */
-    /*var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
-        mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
-        mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
-        mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
-        mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
-    mongoUser = process.env[mongoServiceName + '_USER'];*/
-
-    /* OVERRIDE */
     var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
         mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
         mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
         mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
+        mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
+    mongoUser = process.env[mongoServiceName + '_USER'];
+
+    /* OVERRIDE doesn't work!!! */
+    /*var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
+        mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
+        mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
+        mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
         mongoPassword =  '1S2AbbSpJNZe';
-    mongoUser = 'admin';
+    mongoUser = 'admin';*/
 
     console.log('/server/ --mongoServiceName:', mongoServiceName);
     console.log('/server/ --mongoHost:', mongoHost);
