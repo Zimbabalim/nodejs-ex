@@ -34,27 +34,45 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = "";
 
-console.log('/server/ -', process.env.OPENSHIFT_MONGODB_DB_URL);
+console.log('/server/ -process.env.OPENSHIFT_MONGODB_DB_URL:', process.env.OPENSHIFT_MONGODB_DB_URL);
 
 if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
 
-    var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
+    /* ORIGINAL */
+    /*var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
         mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
         mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
         mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
         mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
+    mongoUser = process.env[mongoServiceName + '_USER'];*/
 
+    /* OVERRIDE */
+    var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
+        mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
+        mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
+        mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
+        mongoPassword =  '1S2AbbSpJNZe';
+    mongoUser = 'admin';
+
+    console.log('/server/ --mongoServiceName:', mongoServiceName);
+    console.log('/server/ --mongoHost:', mongoHost);
+    console.log('/server/ --mongoPort:', mongoPort);
+    console.log('/server/ --mongoDatabase:', mongoDatabase);
+    console.log('/server/ --mongoPassword:', mongoPassword);
+    console.log('/server/ --mongoUser:', mongoUser);
+
+
+    /*
+    /server/ -mongoServiceName: MONGODB
+    /server/ -mongoHost: 172.30.155.209
+    /server/ -mongoPort: 27017
+    /server/ -mongoDatabase: staging
+    /server/ -mongoPassword: q1CXhcw3HYQC7PlP
+    /server/ -mongoUser: userNXJ
+    /server/ -initDb --mongoURL: mongodb://userNXJ:q1CXhcw3HYQC7PlP@172.30.155.209:27017/staging
+     */
     //mongodb://userNXJ:q1CXhcw3HYQC7PlP@172.30.155.209:27017/staging
 
-    mongoUser = process.env[mongoServiceName + '_USER'];
-
-
-    console.log('/server/ -mongoServiceName:', mongoServiceName);
-    console.log('/server/ -mongoHost:', mongoHost);
-    console.log('/server/ -mongoPort:', mongoPort);
-    console.log('/server/ -mongoDatabase:', mongoDatabase);
-    console.log('/server/ -mongoPassword:', mongoPassword);
-    console.log('/server/ -mongoUser:', mongoUser);
 
     if (mongoHost && mongoPort && mongoDatabase) {
         mongoURLLabel = mongoURL = 'mongodb://';
