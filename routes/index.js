@@ -108,6 +108,8 @@ router.get("/api/cms/users/write-swatches", function ( req, res ) {
  */
 router.get("/api/cms/users/get-all", function ( req, res ) {
 
+    console.log('************* /index/ -TEST ', req.db, req);
+
     var db = req.db;
     var data = db.get( "users" );
 

@@ -150,8 +150,9 @@ initDb(function(err){
 });
 
 app.use(function( req, res, next ){
-    console.log('/server/ -APP USE DB?');
+
     req.db = db;
+    console.log('/server/ -APP USE DB?', db, req.db);
     next();
 });
 
@@ -162,7 +163,7 @@ console.log('/server/ - <<');
 
 
 
-// ======== TEST
+// ========
 
 console.log('/server/ -WHERE IS THE DB?', db, '<<<');
 
