@@ -106,7 +106,7 @@ var initDb = function(callback) {
     var mongodb = require('mongodb');
 
     console.log('/server/ -initDb', mongodb);
-    if (mongodb == null) return;
+    // if (mongodb == null) return;
 
     console.log('/server/ -initDb --attempt connect');
 
