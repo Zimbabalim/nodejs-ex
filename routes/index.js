@@ -73,8 +73,11 @@ router.get("/admin", function( req, res ){
 
 router.get("/api/gateway/validate-login", function ( req, res ) {
 
+    console.log('==== /index/ -GET GATEWAY LOGIN ====');
     var db = req.db;
+    console.log('/index/ - GET GATEWAY LOGIN -db?', db);
     var data = db.get( "users" );
+    console.log('/index/ - GET GATEWAY LOGIN -data?', data);
 
     console.log("/index/ - validate-login:", req.query.email.toLowerCase() );
 
