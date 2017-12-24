@@ -46,33 +46,12 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
         mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
     mongoUser = process.env[mongoServiceName + '_USER'];
 
-    /* OVERRIDE doesn't work!!! */
-    /*var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
-        mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
-        mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
-        mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
-        mongoPassword =  '1S2AbbSpJNZe';
-    mongoUser = 'admin';*/
-
     console.log('/server/ --mongoServiceName:', mongoServiceName);
     console.log('/server/ --mongoHost:', mongoHost);
     console.log('/server/ --mongoPort:', mongoPort);
     console.log('/server/ --mongoDatabase:', mongoDatabase);
     console.log('/server/ --mongoPassword:', mongoPassword);
     console.log('/server/ --mongoUser:', mongoUser);
-
-
-    /*
-    /server/ -mongoServiceName: MONGODB
-    /server/ -mongoHost: 172.30.155.209
-    /server/ -mongoPort: 27017
-    /server/ -mongoDatabase: staging
-    /server/ -mongoPassword: q1CXhcw3HYQC7PlP
-    /server/ -mongoUser: userNXJ
-    /server/ -initDb --mongoURL: mongodb://userNXJ:q1CXhcw3HYQC7PlP@172.30.155.209:27017/staging
-     */
-    //mongodb://userNXJ:q1CXhcw3HYQC7PlP@172.30.155.209:27017/staging
-
 
     if (mongoHost && mongoPort && mongoDatabase) {
         mongoURLLabel = mongoURL = 'mongodb://';
@@ -86,16 +65,11 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
     }
 }
 
-// @as : TEST override mongourl
-
 
 var db = null,
     dbDetails = new Object();
 
 var initDb = function(callback) {
-
-    // console.log('/server/ -initDb --disable db connect');
-    // return; // REMOVE - TEST disable db connect
 
     console.log('/server/ -initDb --mongoURL:', mongoURL);
 
@@ -104,29 +78,6 @@ var initDb = function(callback) {
     }
 
     var mongodb = require('mongodb');
-
-    console.log('/server/ -initDb', mongodb);
-    // if (mongodb == null) return;
-
-    console.log('/server/ -initDb --attempt connect');
-
-    /*mongodb.connect(mongoURL, function(err, conn) {
-        if (err) {
-            callback(err);
-            return;
-        }
-
-        db = conn;
-        // dbDetails.databaseName = db.databaseName;
-        dbDetails.databaseName = db.databaseName;
-        dbDetails.url = mongoURLLabel;
-        dbDetails.type = 'MongoDB';
-
-        console.log('/server/ -CONNECT?', dbDetails);
-        console.log('Connected to MongoDB at: %s', mongoURL);
-    });*/
-
-
 
     db = monk( mongoURL ); // @as ADDED
     console.log('/server/ -initDb ???', db);
@@ -149,45 +100,189 @@ initDb(function(err){
     console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
-app.use(function( req, res, next ){
-
+// REMOVED
+/*app.use(function( req, res, next ){
     req.db = db;
-    // console.log('/server/ -APP USE DB?', db, req.db);
     next();
-});
+});*/
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 console.log('/server/ - <<');
 
 
+// ======== ROUTES ========================================================================
+
+app.get("/", function( req, res ){
+    console.log("***************************");
+    console.log("NEW SESSION", Date.now() );
+    console.log("***************************");
+    res.render( "index.ejs" );
+});
+
+app.get("/admin", function( req, res ){
+    res.render( "./../public/CMS/index.html" );
+});
 
 
-// ========
-
-// console.log('/server/ -WHERE IS THE DB?', db, '<<<');
+// ======== ROUTES API ========================================================================
 
 app.get("/api/gateway/validate-login", function ( req, res ) {
 
-    /*if (!db) {
-        console.log('/server/ -TRY CONNECT AGAIN TO DB');
-        initDb(function(err){});
-    }*/
-
     console.log('==== /server/ -GET GATEWAY LOGIN ====');
-    // var db = req.db;
-    console.log('/server/ - GET GATEWAY LOGIN -db?', db);
     var data = db.get( "users" );
-    console.log('/server/ - GET GATEWAY LOGIN -data?', data);
-
-    console.log("/server/ - validate-login:", req.query.email.toLowerCase() );
 
     data.find({ email : req.query.email.toLowerCase() },{},function( e, docs ){
         res.json(docs);
-        // console.log("/index/ - RESULT", docs );
     });
 });
 
+
+app.get("/api/cms/users/initial-population", function ( req, res ) {
+
+    var users = db.get( "users" );
+
+    users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
+
+        var vo = docs[ 0 ];
+        var f = _.has( vo, "swatches" );
+
+        if( f ){
+            // console.log("/index/ -initial-population : HAS SWATCHES PROP - quit");
+        } else {
+            // console.log("/index/ -initial-population : SHOULD CREATE SWATCHES PROP", req.query.swatches );
+            users.findOneAndUpdate( { _id : req.query.uid }, { $set: { swatches: req.query.swatches }} );
+        }
+
+        console.log("/index/ - initial-population:", "user", vo.email, "added swatches?", !f );
+        res.json( { "added_swatches_prop" : !f } );
+    });
+});
+
+
+app.get("/api/cms/users/write-swatches", function ( req, res ) {
+
+    var users = db.get( "users" );
+
+    console.log("/index/ - write-swatches:", req.query.uid, req.query.swatches );
+
+    users.findOneAndUpdate( { _id : req.query.uid }, { $set: { swatches: req.query.swatches || [] }} );
+
+    res.json( { "swatches_modified" : req.query.swatches } );
+
+});
+
+
+app.get("/api/cms/users/get-all", function ( req, res ) {
+
+    var data = db.get( "users" );
+
+    data.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+app.get("/api/cms/users/add-user", function ( req, res ) {
+
+    var users = db.get( "users" );
+
+    if( req.query["email"] ){
+        users.insert( req.query );
+    } else {
+        console.log("/index/ - FAIL");
+    }
+
+    users.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+app.get("/api/cms/users/delete-user", function ( req, res ) { // TODO - generic service
+
+    console.log("/index/ - USER DELETE", req.query.dbid );
+
+    var data = db.get( "users" );
+
+    data.remove({ _id: req.query.dbid });
+
+    data.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+app.get("/api/cms/sundries/get-all", function ( req, res ) {
+
+    var data = db.get( "sundries" );
+
+    data.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+app.get("/api/cms/sundries/add-story", function ( req, res ) {
+
+    var data = db.get( "sundries" );
+
+    req.query.date = getPrettyDate();
+    console.log("/index/ - ************", req.query );
+
+    data.insert( req.query );
+
+    data.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+app.get("/api/cms/sundries/delete-story", function ( req, res ) {
+
+    console.log("/index/ - STORY DELETE", req.query.dbid );
+
+    var data = db.get( "sundries" );
+
+    data.remove({ _id: req.query.dbid });
+
+    data.find({},{},function( e, docs ){
+        res.json(docs);
+    });
+});
+
+
+/* TODO triple check this works after migration */
+app.post("/api/cms/sundries/upload-image", function ( req, res ) {
+
+    console.log("/index/ - UPLOAD IMAGE", req.files.image );
+
+    var source = fs.createReadStream( req.files.image.file );
+    var dest = fs.createWriteStream( "./public/assets/images/sundries/" + req.files.image.filename );
+
+    console.log("/index/ - ********", source.path );
+
+    source.pipe(dest);
+    source.on('end', function() {
+        /* copied */
+        console.log("/index/ - IMAGE SAVED");
+        res.json( { image : req.files.image.filename } );
+    });
+    source.on('error', function(err) { /* error */ });
+});
+
+
+// UTILS
+var getPrettyDate = function () {
+
+    var r,
+        d = new Date().toDateString(),
+        z = d.split(" ");
+
+    r = z[ 2 ] + " " + z[ 1 ] + " " + z[ 3 ];
+
+    return r;
+};
 
 
 
