@@ -152,7 +152,7 @@ initDb(function(err){
 app.use(function( req, res, next ){
 
     req.db = db;
-    console.log('/server/ -APP USE DB?', db, req.db);
+    // console.log('/server/ -APP USE DB?', db, req.db);
     next();
 });
 
@@ -165,7 +165,7 @@ console.log('/server/ - <<');
 
 // ========
 
-console.log('/server/ -WHERE IS THE DB?', db, '<<<');
+// console.log('/server/ -WHERE IS THE DB?', db, '<<<');
 
 app.get("/api/gateway/validate-login", function ( req, res ) {
 
