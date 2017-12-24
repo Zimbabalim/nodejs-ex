@@ -166,7 +166,7 @@ app.get("/api/gateway/validate-login", function ( req, res ) {
 
     console.log('==== /server/ -GET GATEWAY LOGIN ====');
     // var db = req.db;
-    console.log('/server/ - GET GATEWAY LOGIN -db?', db);
+    console.log('/server/ - GET GATEWAY LOGIN -db?', db, this.db);
     var data = db.get( "users" );
     console.log('/server/ - GET GATEWAY LOGIN -data?', data);
 
