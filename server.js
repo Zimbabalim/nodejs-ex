@@ -147,14 +147,73 @@ initDb(function(err){
     console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
-app.use(function( req, res, next ){
+/*app.use(function( req, res, next ){
     console.log('/server/ -APP USE DB?');
     req.db = db;
     next();
-});
+});*/
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 console.log('/server/ - <<');
+
+
+
+
+// ======== TEST
+
+app.get("/api/gateway/validate-login", function ( req, res ) {
+
+    console.log('==== /server/ -GET GATEWAY LOGIN ====');
+    // var db = req.db;
+    console.log('/server/ - GET GATEWAY LOGIN -db?', db);
+    var data = db.get( "users" );
+    console.log('/server/ - GET GATEWAY LOGIN -data?', data);
+
+    console.log("/server/ - validate-login:", req.query.email.toLowerCase() );
+
+    data.find({ email : req.query.email.toLowerCase() },{},function( e, docs ){
+        res.json(docs);
+        // console.log("/index/ - RESULT", docs );
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==============================
 
 module.exports = app ;
