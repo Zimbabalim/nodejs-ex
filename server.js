@@ -110,7 +110,7 @@ var initDb = function(callback) {
 
     console.log('/server/ -initDb --attempt connect');
 
-    mongodb.connect(mongoURL, function(err, conn) {
+    /*mongodb.connect(mongoURL, function(err, conn) {
         if (err) {
             callback(err);
             return;
@@ -124,11 +124,11 @@ var initDb = function(callback) {
 
         console.log('/server/ -CONNECT?', dbDetails);
         console.log('Connected to MongoDB at: %s', mongoURL);
-    });
+    });*/
 
 
 
-    // db = monk( mongoURL ); // @as ADDED
+    db = monk( mongoURL ); // @as ADDED
     console.log('/server/ -initDb ???', db);
 };
 
@@ -173,7 +173,7 @@ app.get("/api/gateway/validate-login", function ( req, res ) {
         initDb(function(err){});
     }*/
 
-    console.log('==== /server/ -GET GATEWAY LOGIN ==== this?', this, '<<');
+    console.log('==== /server/ -GET GATEWAY LOGIN ====');
     // var db = req.db;
     console.log('/server/ - GET GATEWAY LOGIN -db?', db);
     var data = db.get( "users" );
