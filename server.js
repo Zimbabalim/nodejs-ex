@@ -89,10 +89,8 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
 // @as : TEST override mongourl
 
 
-var //db = null,
+var db = null,
     dbDetails = new Object();
-
-this.db = null;
 
 var initDb = function(callback) {
 
@@ -118,10 +116,9 @@ var initDb = function(callback) {
             return;
         }
 
-        // db = conn;
-        this.db = conn;
+        db = conn;
         // dbDetails.databaseName = db.databaseName;
-        dbDetails.databaseName = this.db.databaseName;
+        dbDetails.databaseName = db.databaseName;
         dbDetails.url = mongoURLLabel;
         dbDetails.type = 'MongoDB';
 
@@ -130,8 +127,9 @@ var initDb = function(callback) {
     });
 
 
+
     // db = monk( mongoURL ); // @as ADDED
-    console.log('/server/ -initDb ???', this.db);
+    console.log('/server/ -initDb ???', db);
 };
 
 /**
@@ -166,16 +164,19 @@ console.log('/server/ - <<');
 
 // ======== TEST
 
+console.log('/server/ -WHERE IS THE DB?', db, '<<<');
+
 app.get("/api/gateway/validate-login", function ( req, res ) {
 
-    /*if (!db) {
+    if (!db) {
+        console.log('/server/ -TRY CONNECT AGAIN TO DB');
         initDb(function(err){});
-    }*/
+    }
 
-    console.log('==== /server/ -GET GATEWAY LOGIN ====');
+    console.log('==== /server/ -GET GATEWAY LOGIN ==== this?', this, '<<');
     // var db = req.db;
-    console.log('/server/ - GET GATEWAY LOGIN -db?', this.db);
-    var data = this.db.get( "users" );
+    console.log('/server/ - GET GATEWAY LOGIN -db?', db);
+    var data = db.get( "users" );
     console.log('/server/ - GET GATEWAY LOGIN -data?', data);
 
     console.log("/server/ - validate-login:", req.query.email.toLowerCase() );
@@ -185,6 +186,8 @@ app.get("/api/gateway/validate-login", function ( req, res ) {
         // console.log("/index/ - RESULT", docs );
     });
 });
+
+
 
 
 
