@@ -109,7 +109,8 @@ var initDb = function(callback) {
     if (mongodb == null) return;
 
     console.log('/server/ -initDb --attempt connect');
-    mongodb.connect(mongoURL, function(err, conn) {
+
+    /*mongodb.connect(mongoURL, function(err, conn) {
         if (err) {
             callback(err);
             return;
@@ -122,7 +123,16 @@ var initDb = function(callback) {
 
         console.log('/server/ -CONNECT?', dbDetails);
         console.log('Connected to MongoDB at: %s', mongoURL);
+    });*/
+
+
+    db = monk( mongoURL ); // @as ADDED
+    console.log('/server/ -initDb ???', db);
+    app.use(function( req, res, next ){
+        req.db = db;
+        next();
     });
+
 };
 
 /**
