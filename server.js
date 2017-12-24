@@ -25,7 +25,7 @@ bb.extend( app, {
     upload : true,
     path: "./public/_upload-temp"
 } ); // RESTORE
-// app.use( "/", routes); // @as removed RESTORE
+app.use( "/", routes); // @as removed RESTORE
 // ===
 
 

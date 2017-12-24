@@ -35,43 +35,10 @@ router.get("/admin", function( req, res ){
 
 
 
-
-
-// ***
-
-// router.get("*", function( req, res ){
-//     console.log("/index/ - EVERYTHING");
-//     res.render( "index.ejs", { foo : "mofo folk bonobo zooboodoo" } );
-// });
-
-
-
-
-/*router.all('*', function(req, res, next) {
- //console.log("/server3/ - ", req );
- //res.sendFile( __dirname + "/dist/index.html" );
- console.log("/index/ - ALL");
- });*/
-
-
-/*router.get( function (req, res, next) {
-
- console.log("/index/ - REQUEST");
-
- if (req.accepts('html')){
- // res.sendFile(__dirname + '/index.html');
- res.render( "index.ejs", { foo : "mofo folk bonobo zooboodoo" } );
- }
-
- else next()
- });*/
-
-// ***
-
-
 // ==== GATEWAY ops ====
 
-router.get("/api/gateway/validate-login", function ( req, res ) {
+// RESTORE!!!
+/*router.get("/api/gateway/validate-login", function ( req, res ) {
 
     console.log('==== /index/ -GET GATEWAY LOGIN ====');
     var db = req.db;
@@ -85,7 +52,7 @@ router.get("/api/gateway/validate-login", function ( req, res ) {
         res.json(docs);
         // console.log("/index/ - RESULT", docs );
     });
-});
+});*/
 
 
 // ==== CMS ops ====
