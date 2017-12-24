@@ -25,7 +25,7 @@ bb.extend( app, {
     upload : true,
     path: "./public/_upload-temp"
 } ); // RESTORE
-app.use( "/", routes); // @as removed RESTORE
+// app.use( "/", routes); // @as removed RESTORE
 // ===
 
 
@@ -168,10 +168,10 @@ console.log('/server/ -WHERE IS THE DB?', db, '<<<');
 
 app.get("/api/gateway/validate-login", function ( req, res ) {
 
-    if (!db) {
+    /*if (!db) {
         console.log('/server/ -TRY CONNECT AGAIN TO DB');
         initDb(function(err){});
-    }
+    }*/
 
     console.log('==== /server/ -GET GATEWAY LOGIN ==== this?', this, '<<');
     // var db = req.db;
