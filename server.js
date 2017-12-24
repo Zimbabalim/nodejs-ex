@@ -149,11 +149,11 @@ initDb(function(err){
     console.log('Error connecting to Mongo. Message:\n'+err);
 });
 
-/*app.use(function( req, res, next ){
+app.use(function( req, res, next ){
     console.log('/server/ -APP USE DB?');
     req.db = db;
     next();
-});*/
+});
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
