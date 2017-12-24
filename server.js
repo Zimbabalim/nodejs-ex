@@ -128,11 +128,6 @@ var initDb = function(callback) {
 
     db = monk( mongoURL ); // @as ADDED
     console.log('/server/ -initDb ???', db);
-    app.use(function( req, res, next ){
-        req.db = db;
-        next();
-    });
-
 };
 
 /**
@@ -150,6 +145,12 @@ app.use(function(err, req, res, next){
 
 initDb(function(err){
     console.log('Error connecting to Mongo. Message:\n'+err);
+});
+
+app.use(function( req, res, next ){
+    console.log('/server/ -APP USE DB?');
+    req.db = db;
+    next();
 });
 
 app.listen(port, ip);
