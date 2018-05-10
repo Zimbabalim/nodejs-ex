@@ -32,7 +32,7 @@ http://centrepede-zimbabalim.rhcloud.com/
 
 SSH (powershell):
  rhc ssh staging
- 
+
  p/w : 83Fortess
 
 
@@ -125,6 +125,29 @@ p/w: z3pp3lin
 
 // CREATE SNAPSHOT
 rhc snapshot save staging
+
+---
+8 March 2018
+
+`oc login https://api.pro-eu-west-1.openshift.com`
+u/n: hopkinsfabrics@hotmail.co.uk
+p/w: 83Fortess
+
+mongodb
+`mongo`
+original db that borked (but was working)
+`oc rsh mongodb-1-zmxqb`
+new one created (by openshift) but empty
+`oc rsh mongodb-2-bndwg`
+
+mongo shell:
+> `use admin`
+switched to db admin
+> `db.auth("admin", "00kio4lvEnnW3NnO")`
+`show dbs`
+
+should be able to investigate now
+
 
 
 
