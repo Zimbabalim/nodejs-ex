@@ -1071,6 +1071,11 @@
         "code": "CLD",
         "label": "claude",
         "name": "claude"
+      },
+      {
+        "code": "ARA",
+        "label": "araminta",
+        "name": "araminta"
       }
     ],
 

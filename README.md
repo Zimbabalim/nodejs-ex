@@ -148,6 +148,11 @@ switched to db admin
 
 should be able to investigate now
 
+#### update 10 may 2018
+- new images
+- updated json
+NOTE when local gateway should display, if it doesn't config.json is broken... probably
+
 
 
 
