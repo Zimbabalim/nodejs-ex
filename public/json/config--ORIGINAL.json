@@ -1056,9 +1056,28 @@
         "code": "976",
         "label": "976",
         "name": "976"
+      },
+      {
+        "code": "FSS",
+        "label": "fine striped silk",
+        "name": "fine_striped_silk"
+      },
+      {
+        "code": "NOI",
+        "label": "noil",
+        "name": "noil"
+      },
+      {
+        "code": "CLD",
+        "label": "claude",
+        "name": "claude"
+      },
+      {
+        "code": "ARA",
+        "label": "araminta",
+        "name": "araminta"
       }
     ],
-
 
     "colours": [
       {
@@ -2325,8 +2344,44 @@
         "code": "YEL",
         "label": "Yellow",
         "name": "yellow"
+      },
+      {
+        "code": "BLUPUR",
+        "label": "Blue/Purple",
+        "name": "blue/purple"
+      },
+      {
+        "code": "BLUBLK",
+        "label": "Blue/Black",
+        "name": "blue/black"
+      },
+      {
+        "code": "LILNAT",
+        "label": "Lilac/Natural",
+        "name": "lilac/natural"
+      },
+      {
+        "code": "DRKLIL",
+        "label": "Dark Lilac",
+        "name": "dark_lilac"
+      },
+      {
+        "code": "GSH",
+        "label": "Greyish",
+        "name": "greyish"
+      },
+      {
+        "code": "GSHPUR",
+        "label": "Greyish Purple",
+        "name": "greyish_purple"
+      },
+      {
+        "code": "KHALIL",
+        "label": "Khaki/Lilac",
+        "name": "khaki/lilac"
       }
-    ]  },
+    ]
+  },
 
   "nav_items" : [
 

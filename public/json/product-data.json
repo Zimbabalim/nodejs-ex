@@ -9472,6 +9472,475 @@
           }
         ]
       }
+    },
+
+
+
+
+    {
+      "ferdinand": {
+        "friendly_name": "Ferdinand",
+        "default_product_code": "",
+        "variations": [{
+          "default_by_fabric_type": null,
+          "code": "SILDAM/FER/GRNPNK",
+          "tags": "Silk, damask, green, pink",
+          "details": {
+            "width": "48\"/120cms",
+            "repeats": "5.5\"/14cms"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILDAM/FER/GRNBLU",
+          "tags": "Silk, damask, green, blue",
+          "details": {
+            "width": "48\"/120cms",
+            "repeats": "5.5\"/14cms"
+          }
+        }]
+      }
+    }, {
+      "matilda": {
+        "friendly_name": "Matilda",
+        "default_product_code": "",
+        "variations": [{
+          "default_by_fabric_type": null,
+          "code": "SILDAM/MAT/GRNOGD",
+          "tags": "Silk, damask, green, gold",
+          "details": {
+            "width": "",
+            "repeats": null
+          }
+        }]
+      }
+    }, {
+      "sidney": {
+        "friendly_name": "Sidney",
+        "default_product_code": "",
+        "variations": [{
+          "default_by_fabric_type": null,
+          "code": "SILDAM/SID/GRNOGD",
+          "tags": "Silk, damask, green, gold",
+          "details": {
+            "width": "",
+            "repeats": null
+          }
+        }]
+      }
+    }, {
+      "melbourne": {
+        "friendly_name": "Melbourne",
+        "default_product_code": "SILJAQ/MEL/IVY",
+        "variations": [{
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/IVY",
+          "tags": "Silk, Jacquard, Ivory, Cream, White",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/PNK",
+          "tags": "Silk, Jacquard, Pink",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/PLEBLU",
+          "tags": "Silk, Jacquard, Blue",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": true,
+          "code": "SILJAQ/MEL/LIL",
+          "tags": "Silk, Jacquard, Purple",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/GLD",
+          "tags": "Silk, Jacquard, Gold",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/KIWLIL",
+          "tags": "Silk, Jacquard, Green, Purple",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/GRY",
+          "tags": "Silk, Jacquard, Grey",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/KIWGRY",
+          "tags": "Silk, Jacquard, Grey, Green",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/DRKLIL",
+          "tags": "Silk, Jacquard, Purple",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/BRO",
+          "tags": "Silk, Jacquard, Brown",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/BLUWIN",
+          "tags": "Silk, Jacquard, Blue, Wine, Red",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/WIN",
+          "tags": "Silk, Jacquard, Wine, Red",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/BLUGRN",
+          "tags": "Silk, Jacquard, Blue, Green",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/DRKGRN",
+          "tags": "Silk, Jacquard, Green",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILJAQ/MEL/BSH",
+          "tags": "Silk, Jacquard, Black",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }]
+      }
+    }, {
+      "arrows": {
+        "friendly_name": "Arrows",
+        "default_product_code": "SILQUI/ARR/IVY",
+        "variations": [{
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/IVY",
+          "tags": "Silk, Cotton, Quilting, Ivory, Cream, White",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/FAW",
+          "tags": "Silk, Cotton, Quilting, Cream, Brown",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/PLEGRY",
+          "tags": "Silk, Cotton, Quilting, Grey",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/BLUKHA",
+          "tags": "Silk, Cotton, Quilting, Blue",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/DRKBIS",
+          "tags": "Silk, Cotton, Quilting, Brown",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/GRYGRN",
+          "tags": "Silk, Cotton, Quilting, Grey, Green",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": true,
+          "code": "SILQUI/ARR/BLU",
+          "tags": "Silk, Cotton, Quilting, Blue",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/BLUWIN",
+          "tags": "Silk, Cotton, Quilting, Blue, Wine, Red",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/BLUGRN",
+          "tags": "Silk, Cotton, Quilting, Blue, Green",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }, {
+          "default_by_fabric_type": null,
+          "code": "SILQUI/ARR/BRO",
+          "tags": "Silk, Cotton, Quilting, Brown",
+          "details": {
+            "width": "55\"/140cms",
+            "repeats": "0.5\"/12mm"
+          }
+        }]
+      }
+    }, {
+      "bamboostripes": {
+        "friendly_name": "BambooStripes",
+        "default_product_code": "BAM/BBS/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BAM/BBS/WHI",
+          "tags": "Cotton, Muslin, White",
+          "details": {
+            "width": "44\"/110cms",
+            "repeats": "3mm"
+          }
+        }]
+      }
+    }, {
+      "bamboo_shiny_checks": {
+        "friendly_name": "Bamboo Shiny Checks",
+        "default_product_code": "BAM/BSC/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BAM/BSC/WHI",
+          "tags": "Cotton. Muslin, White",
+          "details": {
+            "width": "44\"/110cms",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "bamboo_squares_and_grids": {
+        "friendly_name": "Bamboo Squares and Grids",
+        "default_product_code": "BAM/BSS/IVY",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BAM/BSS/IVY",
+          "tags": "Cotton, Muslin, White, Ivory",
+          "details": {
+            "width": "44\"/130cms",
+            "repeats": "1.2\"/ 3cms"
+          }
+        }]
+      }
+    }, {
+      "bamboo_wavy": {
+        "friendly_name": "Bamboo Wavy",
+        "default_product_code": "BAM/BWA/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BAM/BWA/WHI",
+          "tags": "Cotton, Muslin, White",
+          "details": {
+            "width": "44\"/130cms",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "bamboo_circles": {
+        "friendly_name": "Bamboo Circles",
+        "default_product_code": "BAM/BAC/IVY",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BAM/BAC/IVY",
+          "tags": "Cotton, Muslin, White, Ivory",
+          "details": {
+            "width": "44\"/130cms",
+            "repeats": "1.5\"/4cm"
+          }
+        }]
+      }
+    }, {
+      "button_size_40": {
+        "friendly_name": "Button Size 40",
+        "default_product_code": "BUT/B40/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BUT/B40/WHI",
+          "tags": "Button, White, Miscellaneous",
+          "details": {
+            "width": "25mm",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "button_size_22": {
+        "friendly_name": "Button Size 22",
+        "default_product_code": "BUT/B22/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BUT/B22/WHI",
+          "tags": "Button, White, Miscellaneous",
+          "details": {
+            "width": "15mm",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "button_size_18": {
+        "friendly_name": "Button Size 18",
+        "default_product_code": "BUT/B18/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BUT/B18/WHI",
+          "tags": "Button, White, Miscellaneous",
+          "details": {
+            "width": "12mm",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "braces_ends": {
+        "friendly_name": "Braces Ends",
+        "default_product_code": "BEN/BND/BRO",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "BEN/BND/BRO",
+          "tags": "Brown, Miscellaneous",
+          "details": {
+            "width": "n/a",
+            "repeats": "n/a"
+          }
+        }]
+      }
+    }, {
+      "tatting_type_a": {
+        "friendly_name": "Tatting Type A",
+        "default_product_code": "COTLCE/TTA/CRM",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "COTLCE/TTA/CRM",
+          "tags": "Cotton, Lace, Cream, White, Ivory",
+          "details": {
+            "width": "0.5\"/1.5cms",
+            "repeats": "0.25\"/8mm"
+          }
+        }]
+      }
+    }, {
+      "tatting_type_b": {
+        "friendly_name": "Tatting Type B",
+        "default_product_code": "COTLCE/TTB/CRM",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "COTLCE/TTB/CRM",
+          "tags": "Cotton, Lace, Cream, White, Ivory",
+          "details": {
+            "width": "0.5\"/1.5cms",
+            "repeats": "0.5\"/1.5cms"
+          }
+        }]
+      }
+    }, {
+      "tattibg_type_c": {
+        "friendly_name": "Tattibg Type C",
+        "default_product_code": "COTLCE/TTC/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "COTLCE/TTC/WHI",
+          "tags": "Cotton, Lace, Cream, White, Ivory",
+          "details": {
+            "width": "1\"/ 2.4cms",
+            "repeats": "1\"/2.4cms"
+          }
+        }]
+      }
+    }, {
+      "original_gold_lace": {
+        "friendly_name": "Original Gold Lace",
+        "default_product_code": "COTLCE/TTC/WHI",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "LCE/OGL/GLD",
+          "tags": "Lace, Gold",
+          "details": {
+            "width": "0.75\"/2cms",
+            "repeats": "6mm"
+          }
+        }]
+      }
+    }, {
+      "gold_fan_lace": {
+        "friendly_name": "Gold Fan Lace",
+        "default_product_code": "LCE/GFL/GLD",
+        "variations": [{
+          "default_by_fabric_type": true,
+          "code": "LCE/GFL/GLD",
+          "tags": "Lace, Gold",
+          "details": {
+            "width": "0.75\"/2cms",
+            "repeats": "18mm"
+          }
+        }]
+      }
     }
+
+
+
+
+
+
   ]
 }

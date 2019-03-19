@@ -8052,7 +8052,7 @@
           },
           {
             "default_by_fabric_type":null,
-            "code":"COT/TXS/BLK",
+            "code":"COT/TXS/BLK ",
             "tags":"Cotton, Figured, Black",
             "details":{
               "width":"53\"/ 130cm",
@@ -9013,6 +9013,461 @@
             "details":{
               "width":"11.5\"/29 cms",
               "repeats":"6\"/ 15cm"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fine_striped_silk":{
+        "friendly_name":"FINE STRIPED SILK",
+        "default_product_code":"SILCOT/FSS/CRM",
+        "variations":[
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/CRM",
+            "tags":"Silk, Cotton, Jacquard, Cream, Ivory",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":true,
+            "code":"SILCOT/FSS/PNK",
+            "tags":"Silk, Cotton, Jacquard, Pink, Ivory",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/PLEBLU",
+            "tags":"Silk, Cotton, Jacquard, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/PLEGRY",
+            "tags":"Silk, Cotton, Jacquard, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/RSB",
+            "tags":"Silk, Cotton, Jacquard, Pink",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/GRYBLU",
+            "tags":"Silk, Cotton, Jacquard, Blue, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/KHAGRY",
+            "tags":"Silk, Cotton, Jacquard, Brown, Grey, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/GRNGRY",
+            "tags":"Silk, Cotton, Jacquard, Grey, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/AUB",
+            "tags":"Silk, Cotton, Jacquard, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILCOT/FSS/BLKSLV",
+            "tags":"Silk, Cotton, Jacquard, Black, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"6mm"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "noil":{
+        "friendly_name":"NOIL",
+        "default_product_code":"SILJAQ/NOI/PLEGRY",
+        "variations":[
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/PLEGRY",
+            "tags":"Silk, Jacquard, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/BGE",
+            "tags":"Silk, Jacquard, Brown",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/BLUBRO",
+            "tags":"Silk, Jacquard, Brown, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/KHABLU",
+            "tags":"Silk, Jacquard, Brown, Blue, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":true,
+            "code":"SILJAQ/NOI/STN",
+            "tags":"Silk, Jacquard, Brown, Green, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/GRYBLU",
+            "tags":"Silk, Jacquard, Blue, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/RST",
+            "tags":"Silk, Jacquard, Brown, Orange, Red",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/BLUGRN",
+            "tags":"Silk, Jacquard, Green, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/DRKKHA",
+            "tags":"Silk, Jacquard, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/CHOBLU",
+            "tags":"Silk, Jacquard, Brown, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/WIN",
+            "tags":"Silk, Jacquard, Wine, Red",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/NOI/BLUBLK",
+            "tags":"Silk, Jacquard, Blue, Black",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"n/a"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "claude":{
+        "friendly_name":"CLAUDE",
+        "default_product_code":"SILQUI/CLD/IVY",
+        "variations":[
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/IVY",
+            "tags":"Silk, Cotton, Quilting, Ivory, Cream",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":true,
+            "code":"SILQUI/CLD/PLEGRY",
+            "tags":"Silk, Cotton, Quilting, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/LILNAT",
+            "tags":"Silk, Cotton, Quilting, Ivory, Purple, Natural",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/PLEBLU",
+            "tags":"Silk, Cotton, Quilting, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/GLD",
+            "tags":"Silk, Cotton, Quilting, Gold, Yellow",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/DRKLIL",
+            "tags":"Silk, Cotton, Quilting, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/DRKKHA",
+            "tags":"Silk, Cotton, Quilting, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/KHAWIN",
+            "tags":"Silk, Cotton, Quilting, Green, Brown, Wine",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/BLUGRN",
+            "tags":"Silk, Cotton, Quilting, Blue, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/DRKGRN",
+            "tags":"Silk, Cotton, Quilting, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/DRKBLU",
+            "tags":"Silk, Cotton, Quilting, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/WIN",
+            "tags":"Silk, Cotton, Quilting, Wine, Red",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILQUI/CLD/BLK",
+            "tags":"Silk, Cotton, Quilting, Black",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"2\"/5cm"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "araminta":{
+        "friendly_name":"ARAMINTA",
+        "default_product_code":"SILJAQ/ARA/IVY",
+        "variations":[
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/IVY",
+            "tags":"Silk, Jacquard, Cream, Ivory",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/PNK",
+            "tags":"Silk, Jacquard, Pink",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":true,
+            "code":"SILJAQ/ARA/PLEBLU",
+            "tags":"Silk, Jacquard, Blue",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/PLEGRY",
+            "tags":"Silk, Jacquard, Grey",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/GSHPUR",
+            "tags":"Silk, Jacquard, Grey, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/KHALIL",
+            "tags":"Silk, Jacquard, Green, Purple, Brown",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/KHAWIN",
+            "tags":"Silk, Jacquard, Green, Wine, Brown",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/BLKMVE",
+            "tags":"Silk, Jacquard, Black, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/BLUPUR",
+            "tags":"Silk, Jacquard, Blue, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/WIN",
+            "tags":"Silk, Jacquard, Wne, Red",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/BLUGRN",
+            "tags":"Silk, Jacquard, Blue, Green",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
+            }
+          },
+          {
+            "default_by_fabric_type":null,
+            "code":"SILJAQ/ARA/AUB",
+            "tags":"Silk, Jacquard, Purple",
+            "details":{
+              "width":"55\"/140cms",
+              "repeats":"3\"/7.5cm"
             }
           }
         ]
