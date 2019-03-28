@@ -9894,8 +9894,8 @@
         }]
       }
     }, {
-      "tattibg_type_c": {
-        "friendly_name": "Tattibg Type C",
+      "tatting_type_c": {
+        "friendly_name": "Tatting Type C",
         "default_product_code": "COTLCE/TTC/WHI",
         "variations": [{
           "default_by_fabric_type": true,
@@ -9936,6 +9936,10 @@
         }]
       }
     }
+
+
+
+
 
 
 
