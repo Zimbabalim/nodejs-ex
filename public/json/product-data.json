@@ -376,6 +376,15 @@
               "width":"48\"/120 cms",
               "repeats":"5.5\"/ 14cms"
             }
+          },
+          {
+            "default_by_fabric_type": null,
+            "code": "SILDAM/SID/GRNOGD",
+            "tags": "Silk, damask, green, gold",
+            "details": {
+              "width": "",
+              "repeats": null
+            }
           }
         ]
       }
@@ -482,6 +491,23 @@
               "width":"48\"/120 cms",
               "repeats":"5.5\"/ 14cms"
             }
+          },
+          {
+            "default_by_fabric_type": null,
+            "code": "SILDAM/FER/GRNPNK",
+            "tags": "Silk, damask, green, pink",
+            "details": {
+              "width": "48\"/120cms",
+              "repeats": "5.5\"/14cms"
+            }
+          }, {
+            "default_by_fabric_type": null,
+            "code": "SILDAM/FER/GRNBLU",
+            "tags": "Silk, damask, green, blue",
+            "details": {
+              "width": "48\"/120cms",
+              "repeats": "5.5\"/14cms"
+            }
           }
         ]
       }
@@ -543,6 +569,15 @@
             "details":{
               "width":"48\"/120 cms",
               "repeats":"5.5\"/ 14cms"
+            }
+          },
+          {
+            "default_by_fabric_type": null,
+            "code": "SILDAM/MAT/GRNOGD",
+            "tags": "Silk, damask, green, gold",
+            "details": {
+              "width": "",
+              "repeats": null
             }
           }
         ]
@@ -9477,57 +9512,8 @@
 
 
 
-    {
-      "ferdinand": {
-        "friendly_name": "Ferdinand",
-        "default_product_code": "",
-        "variations": [{
-          "default_by_fabric_type": null,
-          "code": "SILDAM/FER/GRNPNK",
-          "tags": "Silk, damask, green, pink",
-          "details": {
-            "width": "48\"/120cms",
-            "repeats": "5.5\"/14cms"
-          }
-        }, {
-          "default_by_fabric_type": null,
-          "code": "SILDAM/FER/GRNBLU",
-          "tags": "Silk, damask, green, blue",
-          "details": {
-            "width": "48\"/120cms",
-            "repeats": "5.5\"/14cms"
-          }
-        }]
-      }
-    }, {
-      "matilda": {
-        "friendly_name": "Matilda",
-        "default_product_code": "",
-        "variations": [{
-          "default_by_fabric_type": null,
-          "code": "SILDAM/MAT/GRNOGD",
-          "tags": "Silk, damask, green, gold",
-          "details": {
-            "width": "",
-            "repeats": null
-          }
-        }]
-      }
-    }, {
-      "sidney": {
-        "friendly_name": "Sidney",
-        "default_product_code": "",
-        "variations": [{
-          "default_by_fabric_type": null,
-          "code": "SILDAM/SID/GRNOGD",
-          "tags": "Silk, damask, green, gold",
-          "details": {
-            "width": "",
-            "repeats": null
-          }
-        }]
-      }
-    }, {
+
+ {
       "melbourne": {
         "friendly_name": "Melbourne",
         "default_product_code": "SILJAQ/MEL/IVY",
@@ -9740,8 +9726,8 @@
         }]
       }
     }, {
-      "bamboostripes": {
-        "friendly_name": "BambooStripes",
+      "bamboo_stripes": {
+        "friendly_name": "Bamboo Stripes",
         "default_product_code": "BAM/BBS/WHI",
         "variations": [{
           "default_by_fabric_type": true,
@@ -9910,7 +9896,7 @@
     }, {
       "original_gold_lace": {
         "friendly_name": "Original Gold Lace",
-        "default_product_code": "COTLCE/TTC/WHI",
+        "default_product_code": "LCE/OGL/GLD",
         "variations": [{
           "default_by_fabric_type": true,
           "code": "LCE/OGL/GLD",

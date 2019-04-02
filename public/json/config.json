@@ -158,9 +158,19 @@
         "name": "arnold"
       },
       {
+        "code": "ARR",
+        "label": "arrows",
+        "name": "arrows"
+      },
+      {
         "code": "AUG",
         "label": "augusta",
         "name": "augusta"
+      },
+      {
+        "code": "BAC",
+        "label": "bamboo circles",
+        "name": "bamboo_circles"
       },
       {
         "code": "BAR",
@@ -173,6 +183,11 @@
         "name": "basket"
       },
       {
+        "code": "BBS",
+        "label": "bamboo stripes",
+        "name": "bamboo_stripes"
+      },
+      {
         "code": "BCS",
         "label": "brown checks and stripes",
         "name": "brown_checks_and_stripes"
@@ -183,9 +198,19 @@
         "name": "betty"
       },
       {
+        "code": "BND",
+        "label": "braces ends",
+        "name": "braces_ends"
+      },
+      {
         "code": "BRI",
         "label": "bricks",
         "name": "bricks"
+      },
+      {
+        "code": "BSC",
+        "label": "bamboo shiny checks",
+        "name": "bamboo_shiny_checks"
       },
       {
         "code": "BSF",
@@ -198,9 +223,34 @@
         "name": "biscuit_stripes"
       },
       {
+        "code": "BSS",
+        "label": "bamboo squares and grids",
+        "name": "bamboo_squares_and_grids"
+      },
+      {
+        "code": "BWA",
+        "label": "bamboo wavy",
+        "name": "bamboo_wavy"
+      },
+      {
         "code": "BYE",
         "label": "birds eye",
         "name": "birds_eye"
+      },
+      {
+        "code": "B40",
+        "label": "button size 40",
+        "name": "button_size_40"
+      },
+      {
+        "code": "B22",
+        "label": "button size 22",
+        "name": "button_size_22"
+      },
+      {
+        "code": "B18",
+        "label": "button size 18",
+        "name": "button_size_18"
       },
       {
         "code": "CCS",
@@ -383,11 +433,6 @@
         "name": "frost"
       },
       {
-        "code": "FRODRK",
-        "label": "don't know, think this might be wrong",
-        "name": "don't_know,_think_this_might_be_wrong"
-      },
-      {
         "code": "FSN",
         "label": "floristan",
         "name": "floristan"
@@ -401,6 +446,11 @@
         "code": "GER",
         "label": "gertrude",
         "name": "gertrude"
+      },
+      {
+        "code": "GFL",
+        "label": "gold fan lace",
+        "name": "gold_fan_lace"
       },
       {
         "code": "GRA",
@@ -568,6 +618,11 @@
         "name": "meadow"
       },
       {
+        "code": "MEL",
+        "label": "melbourne",
+        "name": "melbourne"
+      },
+      {
         "code": "MGL",
         "label": "morning glory",
         "name": "morning_glory"
@@ -621,6 +676,11 @@
         "code": "NST",
         "label": "narrow stripes",
         "name": "narrow_stripes"
+      },
+      {
+        "code": "OGL",
+        "label": "original gold lace",
+        "name": "original_gold_lace"
       },
       {
         "code": "ORI",
@@ -876,6 +936,21 @@
         "code": "TSR",
         "label": "textured stripes chenille",
         "name": "textured_stripes_chenille"
+      },
+      {
+        "code": "TTA",
+        "label": "tatting type a",
+        "name": "tatting_type_a"
+      },
+      {
+        "code": "TTB",
+        "label": "tatting type b",
+        "name": "tatting_type_b"
+      },
+      {
+        "code": "TTC",
+        "label": "tatting type c",
+        "name": "tatting_type_c"
       },
       {
         "code": "TXS",
