@@ -570,15 +570,6 @@
               "width":"48\"/120 cms",
               "repeats":"5.5\"/ 14cms"
             }
-          },
-          {
-            "default_by_fabric_type": null,
-            "code": "SILDAM/MAT/GRNOGD",
-            "tags": "Silk, damask, green, gold",
-            "details": {
-              "width": "",
-              "repeats": null
-            }
           }
         ]
       }
