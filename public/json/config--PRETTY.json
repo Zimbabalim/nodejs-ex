@@ -9,7 +9,7 @@
         "cotton" : [ "COT","COTLCE", "COTLIN", "COTMUS", "COTPRI", "MUSPRI", "SILCOT", "SILMOI" ],
         "linen" : [ "COTLIN", "SILLIN"],
         "wool" : [ "WOO", "SILWOO"],
-        "lace" : [ "COTLCE", "SILLCE"]
+        "lace" : [ "COTLCE", "SILLCE", "BUT", "BEN"]
       }
     ],
 
