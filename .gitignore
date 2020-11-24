@@ -7,4 +7,4 @@ data/
 
 # don't want the readme to be accessible on github!
 _R_E_A_D_M_E.md
-
+.env

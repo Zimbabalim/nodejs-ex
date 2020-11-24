@@ -25,6 +25,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "debug": "~2.2.0",
+    "dotenv": "^8.2.0",
     "ejs": "^2.4.1",
     "express": "~4.12.4",
     "express-busboy": "^4.0.0",
@@ -34,7 +35,7 @@
     "mongojs": "^2.3.0",
     "monk": "^3.1.2",
     "morgan": "^1.7.0",
-    "object-assign":"4.1.0"
+    "object-assign": "4.1.0"
   },
   "devDependencies": {},
   "bundleDependencies": [],

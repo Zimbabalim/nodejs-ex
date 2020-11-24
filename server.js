@@ -2,7 +2,8 @@
 // @as : adapt for hopkins
 var express = require('express'),
     app     = express(),
-    morgan  = require('morgan'); // @as removed
+    morgan  = require('morgan'), // @as removed
+    _ = require('lodash');
 
 // @as
 var fs = require( "fs" );
@@ -13,11 +14,14 @@ var monk = require('monk');
 var bb = require('express-busboy');
 // ===
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 console.log('/server/ - @as:17:34 >>');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
-app.use(morgan('combined')); //@as removed
+// app.use(morgan('combined')); //@as removed
 
 // @as added
 app.use( express.static( path.join( __dirname, "public" )));
@@ -29,15 +33,16 @@ app.use( "/", routes); // @as removed RESTORE
 // ===
 
 
+
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
     mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = "";
 
-console.log('/server/ -process.env.OPENSHIFT_MONGODB_DB_URL:', process.env.OPENSHIFT_MONGODB_DB_URL);
+console.log('/server/ -process.env.OPENSHIFT_MONGODB_DB_URL:', process.env.OPENSHIFT_MONGODB_DB_URL, process.env.MONGO_URL);
 
 if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
-
+    
     /* ORIGINAL */
     var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
         mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
@@ -45,14 +50,14 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
         mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
         mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
     mongoUser = process.env[mongoServiceName + '_USER'];
-
+    
     console.log('/server/ --mongoServiceName:', mongoServiceName);
     console.log('/server/ --mongoHost:', mongoHost);
     console.log('/server/ --mongoPort:', mongoPort);
     console.log('/server/ --mongoDatabase:', mongoDatabase);
     console.log('/server/ --mongoPassword:', mongoPassword);
     console.log('/server/ --mongoUser:', mongoUser);
-
+    
     if (mongoHost && mongoPort && mongoDatabase) {
         mongoURLLabel = mongoURL = 'mongodb://';
         if (mongoUser && mongoPassword) {
@@ -61,7 +66,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
         // Provide UI label that excludes user id and pw
         mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
         mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
-
+        
     }
 }
 
@@ -70,17 +75,16 @@ var db = null,
     dbDetails = new Object();
 
 var initDb = function(callback) {
-
+    
     console.log('/server/ -initDb --mongoURL:', mongoURL);
-
+    
     if (mongoURL == null) {
         return;
     }
-
+    
     var mongodb = require('mongodb');
-
+    
     db = monk( mongoURL ); // @as ADDED
-    console.log('/server/ -initDb ???', db);
 };
 
 /**
@@ -128,10 +132,10 @@ app.get("/admin", function( req, res ){
 // ======== ROUTES API ========================================================================
 
 app.get("/api/gateway/validate-login", function ( req, res ) {
-
+    
     console.log('==== /server/ -GET GATEWAY LOGIN ====');
     var data = db.get( "users" );
-
+    
     data.find({ email : req.query.email.toLowerCase() },{},function( e, docs ){
         res.json(docs);
     });
@@ -139,44 +143,86 @@ app.get("/api/gateway/validate-login", function ( req, res ) {
 
 
 app.get("/api/cms/users/initial-population", function ( req, res ) {
-
+    
     var users = db.get( "users" );
-
+    
     users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
-
+        
         var vo = docs[ 0 ];
         var f = _.has( vo, "swatches" );
-
+        
         if( f ){
             // console.log("/index/ -initial-population : HAS SWATCHES PROP - quit");
         } else {
             // console.log("/index/ -initial-population : SHOULD CREATE SWATCHES PROP", req.query.swatches );
             users.findOneAndUpdate( { _id : req.query.uid }, { $set: { swatches: req.query.swatches }} );
         }
-
+        
         console.log("/index/ - initial-population:", "user", vo.email, "added swatches?", !f );
         res.json( { "added_swatches_prop" : !f } );
+        
     });
+    
+    
+    
+    // *** NOTE NOV 2020 - need to create new swatches field with extra props - TODO ultimately deprecate previous swatches field
+    /*
+        users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
+            
+            if (!docs[0]['rich_swatches']) {
+                console.log('********** /server/ -NO RICH SWATCHES **********');
+                users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: 'FIXME' }} );
+            }
+        });
+    */
 });
 
 
 app.get("/api/cms/users/write-swatches", function ( req, res ) {
-
     var users = db.get( "users" );
-
-    console.log("/index/ - write-swatches:", req.query.uid, req.query.swatches );
-
     users.findOneAndUpdate( { _id : req.query.uid }, { $set: { swatches: req.query.swatches || [] }} );
-
     res.json( { "swatches_modified" : req.query.swatches } );
+});
 
+// *** NOTE NOV 2020 - need to create new swatches field with extra props - TODO ultimately deprecate previous swatches field
+app.get("/api/cms/users/write-rich-swatches", function ( req, res ) {
+    
+    var users = db.get( "users" );
+    var result = [];
+    
+    users.findOne({ _id : req.query.uid })
+        .then(function (res) {
+            handle(res.rich_swatches);
+        });
+    
+    function handle(data) {
+        result = (!data) ? [] : data;
+        
+        if (req.query.method === 'add') {
+            result.push({
+                uid: req.query.swatch,
+                datestamp: new Date(),
+                pretty_date: getPrettyDate()
+            })
+        }
+    
+        if (req.query.method === 'remove') {
+            
+            result = _.pullAllBy(result, [{uid: req.query.swatch}], 'uid');
+            console.log('/server/ -handle --SHOULD REMOVE', result);
+            
+            //_.pullAll( User.data.swatches, tgt );
+        }
+    
+        users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: result }} );
+    }
 });
 
 
 app.get("/api/cms/users/get-all", function ( req, res ) {
-
+    
     var data = db.get( "users" );
-
+    
     data.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -184,15 +230,15 @@ app.get("/api/cms/users/get-all", function ( req, res ) {
 
 
 app.get("/api/cms/users/add-user", function ( req, res ) {
-
+    
     var users = db.get( "users" );
-
+    
     if( req.query["email"] ){
         users.insert( req.query );
     } else {
         console.log("/index/ - FAIL");
     }
-
+    
     users.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -200,13 +246,13 @@ app.get("/api/cms/users/add-user", function ( req, res ) {
 
 
 app.get("/api/cms/users/delete-user", function ( req, res ) { // TODO - generic service
-
+    
     console.log("/index/ - USER DELETE", req.query.dbid );
-
+    
     var data = db.get( "users" );
-
+    
     data.remove({ _id: req.query.dbid });
-
+    
     data.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -214,9 +260,9 @@ app.get("/api/cms/users/delete-user", function ( req, res ) { // TODO - generic 
 
 
 app.get("/api/cms/sundries/get-all", function ( req, res ) {
-
+    
     var data = db.get( "sundries" );
-
+    
     data.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -224,14 +270,14 @@ app.get("/api/cms/sundries/get-all", function ( req, res ) {
 
 
 app.get("/api/cms/sundries/add-story", function ( req, res ) {
-
+    
     var data = db.get( "sundries" );
-
+    
     req.query.date = getPrettyDate();
     console.log("/index/ - ************", req.query );
-
+    
     data.insert( req.query );
-
+    
     data.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -239,13 +285,13 @@ app.get("/api/cms/sundries/add-story", function ( req, res ) {
 
 
 app.get("/api/cms/sundries/delete-story", function ( req, res ) {
-
+    
     console.log("/index/ - STORY DELETE", req.query.dbid );
-
+    
     var data = db.get( "sundries" );
-
+    
     data.remove({ _id: req.query.dbid });
-
+    
     data.find({},{},function( e, docs ){
         res.json(docs);
     });
@@ -254,14 +300,14 @@ app.get("/api/cms/sundries/delete-story", function ( req, res ) {
 
 /* TODO triple check this works after migration */
 app.post("/api/cms/sundries/upload-image", function ( req, res ) {
-
+    
     console.log("/index/ - UPLOAD IMAGE", req.files.image );
-
+    
     var source = fs.createReadStream( req.files.image.file );
     var dest = fs.createWriteStream( "./public/assets/images/sundries/" + req.files.image.filename );
-
+    
     console.log("/index/ - ********", source.path );
-
+    
     source.pipe(dest);
     source.on('end', function() {
         /* copied */
@@ -274,51 +320,15 @@ app.post("/api/cms/sundries/upload-image", function ( req, res ) {
 
 // UTILS
 var getPrettyDate = function () {
-
+    
     var r,
         d = new Date().toDateString(),
         z = d.split(" ");
-
+    
     r = z[ 2 ] + " " + z[ 1 ] + " " + z[ 3 ];
-
+    
     return r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // ==============================
