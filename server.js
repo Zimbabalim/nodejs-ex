@@ -148,6 +148,13 @@ app.get("/api/cms/users/initial-population", function ( req, res ) {
     
     users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
         
+        console.log('/server/ -INITIAL');
+        syncSwatchFields(docs[0]);
+        writeToUserLog(
+            req.query.uid,
+            '*** NEW SESSION *** ' + new Date().toDateString() + ' ' + new Date().toLocaleTimeString()
+        );
+        
         var vo = docs[ 0 ];
         var f = _.has( vo, "swatches" );
         
@@ -162,20 +169,65 @@ app.get("/api/cms/users/initial-population", function ( req, res ) {
         res.json( { "added_swatches_prop" : !f } );
         
     });
-    
-    
-    
-    // *** NOTE NOV 2020 - need to create new swatches field with extra props - TODO ultimately deprecate previous swatches field
-    /*
-        users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
-            
-            if (!docs[0]['rich_swatches']) {
-                console.log('********** /server/ -NO RICH SWATCHES **********');
-                users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: 'FIXME' }} );
-            }
-        });
-    */
 });
+
+
+// *** UTILS
+
+var writeToUserLog = function (userId, message) {
+    
+    var maxLength = 256; // *** stop
+    
+    var users = db.get("users");
+    var log;
+    users.findOne({ _id : userId })
+        .then(function (res) {
+            log = res.user_log || [];
+            
+            if (log.length >= maxLength) {
+                log.shift();
+                /*log.push({
+                    message: 'Cleared log'
+                });*/
+            }
+            
+            log.push({
+                message: message
+            });
+            users.findOneAndUpdate( { _id : userId }, { $set: { user_log: log }} );
+        });
+}
+
+var syncSwatchFields = function (user) {
+    
+    if (!user) {
+        return;
+    }
+    
+    if (user.swatches && user.rich_swatches) {
+        console.log('/server/ -syncSwatchFields --DO NOTHING');
+        return;
+    }
+    
+    if (user.swatches && !user.rich_swatches) {
+        
+        var richSwatches = _.map((user.swatches), function (item) {
+            return createRichSwatch(item, false);
+        });
+        
+        // *** TODO should optimise
+        var users = db.get( "users" );
+        users.findOneAndUpdate( { _id : user._id }, { $set: { rich_swatches: richSwatches, user_log: [] }} );
+    }
+}
+
+var createRichSwatch = function (swatch, dated) {
+    return {
+        uid: swatch,
+        datestamp: (dated) ? new Date() : null,
+        pretty_date: (dated) ? getPrettyDate() : null
+    }
+}
 
 
 app.get("/api/cms/users/write-swatches", function ( req, res ) {
@@ -192,29 +244,34 @@ app.get("/api/cms/users/write-rich-swatches", function ( req, res ) {
     
     users.findOne({ _id : req.query.uid })
         .then(function (res) {
-            handle(res.rich_swatches);
-        });
+            handle(_.clone(res.rich_swatches)); // *** FIXME clone?
+        })
+        .catch(function (error) {
+            console.log('/server/ -WRITE ERROR', error);
+        })
+    ;
     
     function handle(data) {
         result = (!data) ? [] : data;
         
         if (req.query.method === 'add') {
-            result.push({
-                uid: req.query.swatch,
-                datestamp: new Date(),
-                pretty_date: getPrettyDate()
-            })
+            result.push(createRichSwatch(req.query.swatch, true));
+            writeToUserLog(
+                req.query.uid,
+                '(+) added: ' + req.query.swatch
+            );
         }
     
         if (req.query.method === 'remove') {
-            
             result = _.pullAllBy(result, [{uid: req.query.swatch}], 'uid');
-            console.log('/server/ -handle --SHOULD REMOVE', result);
-            
-            //_.pullAll( User.data.swatches, tgt );
+            writeToUserLog(
+                req.query.uid,
+                '(-) deleted: ' + req.query.swatch
+            );
         }
     
-        users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: result }} );
+        users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: result}} );
+        res.json( { "rich_swatches_modified" : result } );
     }
 });
 
