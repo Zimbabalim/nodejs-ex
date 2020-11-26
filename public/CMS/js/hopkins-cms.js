@@ -12520,7 +12520,7 @@
 	    };
 
 	    // DEV ONLY REMOVE
-	    var AUTO_LOGIN = true;
+	    var AUTO_LOGIN = false;
 
 	    var init = function init() {
 
