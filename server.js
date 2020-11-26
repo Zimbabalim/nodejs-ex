@@ -121,6 +121,10 @@ app.get("/", function( req, res ){
     console.log("***************************");
     console.log("NEW SESSION", Date.now() );
     console.log("***************************");
+    
+    sessionLogPrettyMeta.index = 1;
+    setColour();
+    
     res.render( "index.ejs" );
 });
 
@@ -174,12 +178,46 @@ app.get("/api/cms/users/initial-population", function ( req, res ) {
 
 // *** UTILS
 
+const sessionLogPrettyMeta = {
+    index: 1,
+    // colour: ['red', 'green', 'blue', 'orange', 'yellow'],
+    currColour: null
+}
+
+var setColour = function () {
+    /*let a = ['red', 'green', 'blue'];
+console.log(a);
+
+let l = a.length;
+let r = 5;
+
+for (let i = 0; i < r; i ++) {
+  let z = (i % l);
+  let t = a[z];
+  console.log(i, z, t);
+}*/
+    /*const len = sessionLogPrettyMeta.colour.length;
+    const colour = sessionLogPrettyMeta.colour[sessionLogPrettyMeta.index % len];
+    sessionLogPrettyMeta.currColour = colour;*/
+    
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    
+    sessionLogPrettyMeta.currColour = getRandomColor();
+}
+
 var writeToUserLog = function (userId, message) {
     
     var maxLength = 256; // *** stop
-    
     var users = db.get("users");
     var log;
+    
     users.findOne({ _id : userId })
         .then(function (res) {
             log = res.user_log || [];
@@ -192,7 +230,9 @@ var writeToUserLog = function (userId, message) {
             }
             
             log.push({
-                message: message
+                message: message,
+                index: sessionLogPrettyMeta.index ++,
+                colour: sessionLogPrettyMeta.currColour
             });
             users.findOneAndUpdate( { _id : userId }, { $set: { user_log: log }} );
         });
@@ -225,7 +265,8 @@ var createRichSwatch = function (swatch, dated) {
     return {
         uid: swatch,
         datestamp: (dated) ? new Date() : null,
-        pretty_date: (dated) ? getPrettyDate() : null
+        pretty_date: (dated) ? getPrettyDate() : null,
+        cms_marked: 0
     }
 }
 
@@ -273,6 +314,25 @@ app.get("/api/cms/users/write-rich-swatches", function ( req, res ) {
         users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: result}} );
         res.json( { "rich_swatches_modified" : result } );
     }
+});
+
+app.get("/api/cms/users/toggle-rich-swatch-mark", function ( req, res ) {
+    console.log('/toggle-rich-swatch-mark/ -', req.query);
+    var users = db.get( "users" );
+    users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: req.query.collection}} );
+    res.json( { "toggle_rich_swatch_mark_modified" : req.query.collection } );
+});
+
+
+
+app.get("/api/cms/users/save-user-notes", function ( req, res ) {
+    
+    console.log('/server/ -NOTEPAD', req.query.uid);
+    
+    var users = db.get( "users" );
+    users.findOneAndUpdate( { _id : req.query.uid }, { $set: { user_notes: req.query.text}} );
+    
+    res.json( { "saved_user_notes" : req.query.text } );
 });
 
 

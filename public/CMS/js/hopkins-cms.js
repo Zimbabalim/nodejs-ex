@@ -9561,7 +9561,7 @@
 
 
 	// module
-	exports.push([module.id, "#email-editor {\n  /*ul{\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style-type: none;\r\n  }\r\n\r\n  button{\r\n    margin: 0.5rem;\r\n    margin-left: 0;\r\n    padding: 0.25rem;\r\n  }\r\n\r\n  .existing-users, .new-user {\r\n    float: left;\r\n  }*/\n  /*.existing-users{\r\n\r\n    height: 100%;\r\n    width : 40%;\r\n    margin-right: 2rem;\r\n\r\n    ul{\r\n\r\n      overflow: scroll;\r\n      height: 80%;\r\n\r\n      li{\r\n\r\n        margin-bottom: 0.5rem;\r\n        padding: 0.5rem;\r\n        background-color: #999;\r\n\r\n        p{\r\n          margin: 0;\r\n          padding: 0;\r\n        }\r\n\r\n      }\r\n\r\n    }\r\n\r\n  }*/\n  /*.new-user{\r\n\r\n    width : 40%;\r\n\r\n    > div{\r\n      margin: 0.5rem 0;\r\n      //padding: 0.5rem 0;\r\n    }\r\n\r\n    input{\r\n      width: 75%;\r\n    }\r\n\r\n    label{\r\n      min-width: 25%;\r\n      display: inline-block;\r\n    }\r\n\r\n    .controls{\r\n      background-color: #999;\r\n      margin: 0.5rem 0;\r\n      margin-top: 2rem;\r\n      padding: 0.5rem;\r\n      text-align: right;\r\n    }\r\n\r\n    ul{\r\n      li{\r\n        display: inline-block;\r\n\r\n        &.has-error{\r\n          color: red;\r\n          margin-right: 0.5rem;\r\n          font-weight: bold;\r\n        }\r\n      }\r\n    }\r\n\r\n  }*/ }\n  #email-editor .user-notes--container {\n    background-color: red; }\n  #email-editor--textarea {\n    width: 100%; }\n\nhtml, body {\n  height: 100%; }\n\nbody {\n  background-color: #ccc;\n  font-family: Verdana;\n  font-size: 100%; }\n\n#app-container, #views {\n  height: 100%; }\n\n#nav {\n  background-color: #999;\n  padding: 0.25rem;\n  text-align: right; }\n  #nav button {\n    margin: 0.25rem; }\n\n#views {\n  position: relative;\n  font-size: 0.8rem;\n  height: 100%; }\n  #views > div {\n    position: absolute;\n    width: 100%;\n    display: none; }\n    #views > div.is-active {\n      display: block; }\n  #views > div {\n    height: 100%; }\n  #views * {\n    box-sizing: border-box; }\n  #views ul {\n    margin: 0;\n    padding: 0;\n    list-style-type: none; }\n  #views button {\n    margin: 0.5rem;\n    margin-left: 0;\n    padding: 0.25rem;\n    background-color: #333;\n    color: #ccc;\n    font-size: 80%;\n    border: none;\n    border-radius: 0.25rem;\n    border: 1px solid black; }\n  #views .panel-container {\n    display: flex; }\n  #views .content-list {\n    width: 70%;\n    margin-right: 2rem;\n    height: 95vh; }\n    #views .content-list.existing-users ul {\n      position: relative; }\n      #views .content-list.existing-users ul li p.counter {\n        position: absolute;\n        right: 0.5rem;\n        border: 1px solid #777;\n        padding: 0.1rem 0.25rem;\n        color: white;\n        font-size: 80%;\n        border-radius: 0.15rem; }\n      #views .content-list.existing-users ul li p {\n        padding: 0.1rem 0; }\n        #views .content-list.existing-users ul li p span:first-child {\n          color: #444;\n          font-size: 80%; }\n        #views .content-list.existing-users ul li p span:last-child {\n          color: #333;\n          font-weight: bold;\n          background-color: #bbb;\n          padding: 0 0.25rem;\n          border-radius: 0.25rem;\n          border: 1px solid #ccc; }\n    #views .content-list ul {\n      overflow: scroll;\n      overflow-x: hidden;\n      height: 80%; }\n      #views .content-list ul li {\n        margin-bottom: 0.5rem;\n        padding: 0.5rem;\n        background-color: #999; }\n        #views .content-list ul li p {\n          margin: 0;\n          padding: 0; }\n    #views .content-list ul.user-swatches-list {\n      margin-top: 1rem;\n      overflow: auto; }\n      #views .content-list ul.user-swatches-list li {\n        padding: 0.25rem;\n        display: inline-block;\n        background-color: #bbb;\n        border: 1px solid #ccc;\n        margin: 0.1rem;\n        border-radius: 0.25rem;\n        cursor: cell; }\n        #views .content-list ul.user-swatches-list li.is-marked {\n          background-color: white;\n          border-color: blue;\n          cursor: crosshair; }\n          #views .content-list ul.user-swatches-list li.is-marked a {\n            color: white; }\n        #views .content-list ul.user-swatches-list li a {\n          padding: 0;\n          margin: 0; }\n        #views .content-list ul.user-swatches-list li span {\n          font-size: 80%;\n          margin: 0 0.5rem;\n          vertical-align: top;\n          padding-top: 0.5rem;\n          display: inline-block; }\n  #views .content-list.existing-stories ul li {\n    background-color: #fff; }\n  #views .content-editor {\n    width: 40%; }\n    #views .content-editor > div {\n      margin: 0.5rem 0; }\n    #views .content-editor input, #views .content-editor textarea {\n      width: 75%; }\n    #views .content-editor textarea {\n      height: 10rem; }\n    #views .content-editor label {\n      min-width: 25%;\n      display: inline-block;\n      vertical-align: top; }\n    #views .content-editor .controls {\n      background-color: #999;\n      margin: 0.5rem 0;\n      margin-top: 2rem;\n      padding: 0.5rem;\n      text-align: right; }\n    #views .content-editor ul li {\n      display: inline-block; }\n      #views .content-editor ul li.has-error {\n        color: red;\n        margin-right: 0.5rem;\n        font-weight: bold; }\n    #views .content-editor .image-thumbs {\n      text-align: right; }\n      #views .content-editor .image-thumbs img {\n        width: 3rem;\n        height: auto;\n        margin: 0.5rem; }\n\n.article {\n  border-bottom: 1px solid #333333;\n  padding-bottom: 1rem;\n  margin-bottom: 1rem; }\n  .article .hbox::after {\n    clear: both;\n    content: \"\";\n    display: table; }\n  .article .hbox > div {\n    width: 50%; }\n  .article a {\n    text-decoration: underline;\n    color: #77787b; }\n    .article a:hover {\n      text-decoration: none;\n      color: #333333; }\n  .article ul {\n    list-style: initial;\n    margin-left: 0.5rem; }\n    .article ul li {\n      list-style: initial;\n      margin-left: 0.5rem; }\n  .article .hbox > div:first-child {\n    padding-right: 1rem;\n    width: 25%; }\n  .article h4, .article p, .article img {\n    margin: 0;\n    padding: 0; }\n  .article img {\n    width: 666px;\n    max-width: 100%;\n    border: 1px solid #a7a9ac; }\n  .article .headline-panel {\n    margin-bottom: 1rem; }\n    .article .headline-panel span:first-child {\n      padding-right: 1rem; }\n    .article .headline-panel::after {\n      clear: both;\n      content: \"\";\n      display: table; }\n", ""]);
+	exports.push([module.id, "#email-editor {\n  /*ul{\r\n    margin: 0;\r\n    padding: 0;\r\n    list-style-type: none;\r\n  }\r\n\r\n  button{\r\n    margin: 0.5rem;\r\n    margin-left: 0;\r\n    padding: 0.25rem;\r\n  }\r\n\r\n  .existing-users, .new-user {\r\n    float: left;\r\n  }*/\n  /*.existing-users{\r\n\r\n    height: 100%;\r\n    width : 40%;\r\n    margin-right: 2rem;\r\n\r\n    ul{\r\n\r\n      overflow: scroll;\r\n      height: 80%;\r\n\r\n      li{\r\n\r\n        margin-bottom: 0.5rem;\r\n        padding: 0.5rem;\r\n        background-color: #999;\r\n\r\n        p{\r\n          margin: 0;\r\n          padding: 0;\r\n        }\r\n\r\n      }\r\n\r\n    }\r\n\r\n  }*/\n  /*.new-user{\r\n\r\n    width : 40%;\r\n\r\n    > div{\r\n      margin: 0.5rem 0;\r\n      //padding: 0.5rem 0;\r\n    }\r\n\r\n    input{\r\n      width: 75%;\r\n    }\r\n\r\n    label{\r\n      min-width: 25%;\r\n      display: inline-block;\r\n    }\r\n\r\n    .controls{\r\n      background-color: #999;\r\n      margin: 0.5rem 0;\r\n      margin-top: 2rem;\r\n      padding: 0.5rem;\r\n      text-align: right;\r\n    }\r\n\r\n    ul{\r\n      li{\r\n        display: inline-block;\r\n\r\n        &.has-error{\r\n          color: red;\r\n          margin-right: 0.5rem;\r\n          font-weight: bold;\r\n        }\r\n      }\r\n    }\r\n\r\n  }*/ }\n  #email-editor .user-notes--container {\n    background-color: red; }\n  #email-editor--textarea {\n    width: 100%; }\n  #email-editor .button-bar {\n    display: flex;\n    justify-content: space-between; }\n\n.overlay {\n  background-color: rgba(0, 0, 0, 0.8);\n  height: 100vh;\n  position: absolute;\n  width: 100%;\n  z-index: 1;\n  display: none;\n  top: 0; }\n  .overlay.is-active {\n    display: flex; }\n  .overlay__close-btn {\n    background-color: orange;\n    position: absolute;\n    right: 10px;\n    top: 10px;\n    font-size: 1rem;\n    padding: 5px;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 2rem;\n    height: 2rem;\n    font-weight: bold;\n    cursor: default; }\n  .overlay__inner {\n    width: 100%;\n    margin: 20px;\n    display: flex;\n    height: 66vh; }\n    .overlay__inner .button-strip {\n      background-color: #999;\n      display: flex;\n      justify-content: space-evenly; }\n  .overlay .user-log {\n    background-color: rgba(0, 0, 0, 0.5);\n    width: 50%;\n    height: auto; }\n    .overlay .user-log__inner {\n      height: 66vh;\n      overflow: scroll;\n      padding: 20px !important; }\n      .overlay .user-log__inner .user-log__item {\n        line-height: 1.4;\n        font-size: 0.75rem; }\n      .overlay .user-log__inner .item__numeral {\n        color: white;\n        text-align: right;\n        width: 2rem;\n        display: inline-block;\n        margin-right: 1rem;\n        font-size: 0.6rem;\n        padding-right: 5px;\n        opacity: 0.5; }\n      .overlay .user-log__inner .item__message--new-session {\n        color: #FF5722;\n        background-color: black; }\n      .overlay .user-log__inner .item__message--added {\n        color: #8BC34A; }\n      .overlay .user-log__inner .item__message--deleted {\n        color: #607D8B; }\n  .overlay .notepad {\n    width: 50%; }\n    .overlay .notepad__inner {\n      height: 66vh; }\n    .overlay .notepad__textarea {\n      background-color: #d7deb2;\n      width: 100%;\n      height: 66vh;\n      padding: 20px;\n      resize: none; }\n\nhtml, body {\n  height: 100%; }\n\nbody {\n  background-color: #ccc;\n  font-family: Verdana;\n  font-size: 100%; }\n\n#app-container, #views {\n  height: 100%; }\n\n#nav {\n  background-color: #999;\n  padding: 0.25rem;\n  text-align: right; }\n  #nav button {\n    margin: 0.25rem; }\n\n#views {\n  position: relative;\n  font-size: 0.8rem;\n  height: 100%; }\n  #views > div {\n    position: absolute;\n    width: 100%;\n    display: none; }\n    #views > div.is-active {\n      display: block; }\n  #views > div {\n    height: 100%; }\n  #views * {\n    box-sizing: border-box; }\n  #views ul {\n    margin: 0;\n    padding: 0;\n    list-style-type: none; }\n  #views button {\n    margin: 0.5rem;\n    margin-left: 0;\n    padding: 0.25rem;\n    background-color: #333;\n    color: #ccc;\n    font-size: 80%;\n    border: none;\n    border-radius: 0.25rem;\n    border: 1px solid black; }\n  #views .panel-container {\n    display: flex; }\n  #views .content-list {\n    width: 70%;\n    margin-right: 2rem;\n    height: 95vh; }\n    #views .content-list.existing-users ul {\n      position: relative; }\n      #views .content-list.existing-users ul li p.counter {\n        position: absolute;\n        right: 0.5rem;\n        border: 1px solid #777;\n        padding: 0.1rem 0.25rem;\n        color: white;\n        font-size: 80%;\n        border-radius: 0.15rem; }\n      #views .content-list.existing-users ul li p {\n        padding: 0.1rem 0; }\n        #views .content-list.existing-users ul li p span:first-child {\n          color: #444;\n          font-size: 80%; }\n        #views .content-list.existing-users ul li p span:last-child {\n          color: #333;\n          font-weight: bold;\n          background-color: #bbb;\n          padding: 0 0.25rem;\n          border-radius: 0.25rem;\n          border: 1px solid #ccc; }\n    #views .content-list ul {\n      overflow: scroll;\n      overflow-x: hidden;\n      height: 80%; }\n      #views .content-list ul li {\n        margin-bottom: 0.5rem;\n        padding: 0.5rem;\n        background-color: #999; }\n        #views .content-list ul li p {\n          margin: 0;\n          padding: 0; }\n    #views .content-list ul.user-swatches-list {\n      margin-top: 1rem;\n      overflow: auto;\n      display: flex;\n      flex-wrap: wrap;\n      justify-content: center; }\n      #views .content-list ul.user-swatches-list li {\n        padding: 0.15rem;\n        display: flex;\n        background-color: #bbb;\n        border: 1px solid #ccc;\n        margin: 0.1rem;\n        border-radius: 0.5rem;\n        cursor: cell;\n        position: relative; }\n        #views .content-list ul.user-swatches-list li:after {\n          content: '';\n          background-color: red;\n          opacity: 0;\n          position: absolute;\n          width: 100%;\n          height: 100%;\n          top: 0;\n          left: 0; }\n        #views .content-list ul.user-swatches-list li.is-marked {\n          background-color: white;\n          border-color: blue;\n          cursor: crosshair; }\n          #views .content-list ul.user-swatches-list li.is-marked a {\n            color: white; }\n        #views .content-list ul.user-swatches-list li a {\n          padding: 0;\n          margin: 0; }\n        #views .content-list ul.user-swatches-list li img {\n          border-radius: 0.4rem; }\n        #views .content-list ul.user-swatches-list li span {\n          font-size: 80%;\n          margin: 0 0.5rem;\n          vertical-align: top;\n          padding-top: 0.5rem;\n          display: inline-block; }\n        #views .content-list ul.user-swatches-list li .swatch__date {\n          font-weight: bold;\n          color: darkblue; }\n  #views .content-list.existing-stories ul li {\n    background-color: #fff; }\n  #views .content-editor {\n    width: 40%; }\n    #views .content-editor > div {\n      margin: 0.5rem 0; }\n    #views .content-editor input, #views .content-editor textarea {\n      width: 75%; }\n    #views .content-editor textarea {\n      height: 10rem; }\n    #views .content-editor label {\n      min-width: 25%;\n      display: inline-block;\n      vertical-align: top; }\n    #views .content-editor .controls {\n      background-color: #999;\n      margin: 0.5rem 0;\n      margin-top: 2rem;\n      padding: 0.5rem;\n      text-align: right; }\n    #views .content-editor ul li {\n      display: inline-block; }\n      #views .content-editor ul li.has-error {\n        color: red;\n        margin-right: 0.5rem;\n        font-weight: bold; }\n    #views .content-editor .image-thumbs {\n      text-align: right; }\n      #views .content-editor .image-thumbs img {\n        width: 3rem;\n        height: auto;\n        margin: 0.5rem; }\n\n.article {\n  border-bottom: 1px solid #333333;\n  padding-bottom: 1rem;\n  margin-bottom: 1rem; }\n  .article .hbox::after {\n    clear: both;\n    content: \"\";\n    display: table; }\n  .article .hbox > div {\n    width: 50%; }\n  .article a {\n    text-decoration: underline;\n    color: #77787b; }\n    .article a:hover {\n      text-decoration: none;\n      color: #333333; }\n  .article ul {\n    list-style: initial;\n    margin-left: 0.5rem; }\n    .article ul li {\n      list-style: initial;\n      margin-left: 0.5rem; }\n  .article .hbox > div:first-child {\n    padding-right: 1rem;\n    width: 25%; }\n  .article h4, .article p, .article img {\n    margin: 0;\n    padding: 0; }\n  .article img {\n    width: 666px;\n    max-width: 100%;\n    border: 1px solid #a7a9ac; }\n  .article .headline-panel {\n    margin-bottom: 1rem; }\n    .article .headline-panel span:first-child {\n      padding-right: 1rem; }\n    .article .headline-panel::after {\n      clear: both;\n      content: \"\";\n      display: table; }\n", ""]);
 
 	// exports
 
@@ -12638,6 +12638,10 @@
 
 	var _UserDataSv2 = _interopRequireDefault(_UserDataSv);
 
+	var _UserOverlay = __webpack_require__(189);
+
+	var _UserOverlay2 = _interopRequireDefault(_UserOverlay);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function EmailEditorView(api) {
@@ -12684,14 +12688,42 @@
 	                return {
 	                    data: [],
 	                    currentUser: [],
-	                    newUserIsValid: false
+	                    newUserIsValid: false,
+	                    userOverlayData: null,
+	                    preventUpdate: false
+	                    // isFirstRun: true
 	                };
 	            },
+
+	            // 2144441/1 bathroom repair
 
 	            componentDidMount: function componentDidMount() {
 	                els.reactEl = _reactDom2.default.findDOMNode(this);
 	                uis.component = this;
 	            },
+
+	            /*componentDidUpdate(prevProps) {
+	                console.log('???? /EmailEditorView/ -componentDidUpdate');
+	                      if (this.props === prevProps) {
+	                    console.log('/EmailEditorView/ -componentDidUpdate --SHOULD CHANGE');
+	                    this.setState({isFirstRun: false})
+	                }
+	            },*/
+
+	            /*shouldComponentUpdate: function (nextProps, nextState) {
+	                console.log('/EmailEditorView/ -shouldComponentUpdate ====== P', nextProps);
+	                console.log('/EmailEditorView/ -shouldComponentUpdate ====== S', nextState.preventUpdate);
+	                
+	               /!* if (nextState.userOverlayData === null || nextState.userOverlayData !== null && !this.state.isFirstRun) {
+	                    return false;
+	                }*!/
+	                
+	                /!*if (this.state.isFirstRun) {
+	                    return true;
+	                }*!/
+	                
+	                return !this.state.preventUpdate;
+	            },*/
 
 	            update: function update(_data) {
 	                this.setState({ data: _data.reverse() });
@@ -12839,30 +12871,93 @@
 	            },
 
 	            getAllPersistence: function getAllPersistence() {},
+
+	            toggleUserOverlay: function toggleUserOverlay(userData) {
+	                var overlayEl = this.refs['overlay'];
+
+	                if (userData) {
+	                    overlayEl.classList.add('is-active');
+	                    this.setState({ userOverlayData: userData });
+	                    // this.setState({ preventUpdate : false });
+	                }
+
+	                if (!userData) {
+	                    overlayEl.classList.remove('is-active');
+	                    this.setState({ userOverlayData: null });
+	                    // this.setState({ preventUpdate : false });
+	                }
+
+	                console.log('/EmailEditorView/ -toggleUserOverlay', userData);
+	            },
+
+	            /*toggleRichSwatchClicked: function (isMarked) {
+	                console.log('/EmailEditorView/ -toggleRichSwatchClicked', isMarked);
+	            },*/
+
 	            // *******************************
 
 	            render: function render() {
 	                var _this = this;
+
+	                console.log('???? /EmailEditorView/ -render');
 
 	                var getSwatches = function getSwatches(_data, _clickCallback) {
 
 	                    var items = [];
 	                    var _getPersistence = _this.getPersistence;
 
-	                    _.each(_data.swatches, function (_v) {
+	                    // console.log('/EmailEditorView/ -getSwatches', _data);
+
+	                    _.each(_data.rich_swatches, function (item) {
 	                        items.push(_react3.default.createElement(
 	                            "li",
 	                            {
-	                                key: _v,
-	                                className: "_" + _data._id + "-" + replaceSlashes(_v),
-	                                onClick: function onClick() {
-	                                    _clickCallback(_data, _v);
-	                                } },
-	                            _react3.default.createElement("img", { src: props.imagePath + "thumbnails/" + replaceSlashes(_v) + "_a.jpg", alt: "" }),
+	                                key: item.uid,
+	                                className: item.cms_marked === '1' ? 'is-marked' : null,
+	                                onClick: function onClick(e) {
+	                                    // item.cms_marked = !item.cms_marked;
+
+	                                    // console.log('/EmailEditorView/ -CLICK', e.target.parentNode);
+
+	                                    // item.cms_marked = (item.cms_marked === '0') ? '1' : '0';
+	                                    var el = e.target;
+	                                    console.log('_____________/EmailEditorView/ -', el);
+
+	                                    // let value;
+
+	                                    if (item.cms_marked === '0') {
+	                                        item.cms_marked = '1';
+	                                        el.classList.add('is-marked');
+	                                    } else {
+	                                        item.cms_marked = '0';
+	                                        el.classList.remove('is-marked');
+	                                    }
+
+	                                    /*if (item.cms_marked === '1') {
+	                                        item.cms_marked = '0';
+	                                        el.classList.remove('.is-marked');
+	                                    }*/
+
+	                                    // console.log('/EmailEditorView/ ->>>>???', item.cms_marked);
+	                                    actionRunner('toggle-rich-swatch-mark', {
+	                                        payload: {
+	                                            uid: _data._id,
+	                                            collection: _data.rich_swatches
+	                                        },
+	                                        clientCollection: _data.rich_swatches
+	                                    });
+	                                }
+	                            },
+	                            _react3.default.createElement("img", { src: props.imagePath + "thumbnails/" + replaceSlashes(item.uid) + "_a.jpg", alt: "" }),
 	                            _react3.default.createElement(
 	                                "span",
 	                                null,
-	                                _v
+	                                item.uid
+	                            ),
+	                            _react3.default.createElement(
+	                                "span",
+	                                { className: 'swatch__date' },
+	                                item.pretty_date
 	                            )
 	                        ));
 	                        _getPersistence(_data._id);
@@ -12877,16 +12972,6 @@
 
 	                var i = 1;
 	                var create = function create(_data) {
-
-	                    // console.log("/EmailEditorView/ -create ", _data );
-	                    // console.log("/EmailEditorView/ -create ", i ++ );
-
-	                    // *** aug 19 - init lookup table for marked swatches
-	                    // REMOVE?
-	                    /*props.markedSwatchesTable.push({
-	                        id: _data._id,
-	                        swatches: []
-	                    });*/
 
 	                    return _react3.default.createElement(
 	                        "li",
@@ -12920,9 +13005,20 @@
 	                        ),
 	                        getSwatches(_data, _this.onSwatchClicked),
 	                        _react3.default.createElement(
-	                            "button",
-	                            { onClick: _this.onExistingUserDeleteClicked, "data-dbid": _data._id },
-	                            "DELETE"
+	                            "div",
+	                            { className: "button-bar" },
+	                            _react3.default.createElement(
+	                                "button",
+	                                { onClick: _this.onExistingUserDeleteClicked, "data-dbid": _data._id },
+	                                "DELETE USER"
+	                            ),
+	                            _react3.default.createElement(
+	                                "button",
+	                                { onClick: function onClick() {
+	                                        _this.toggleUserOverlay(_data);
+	                                    } },
+	                                "LOG / NOTES"
+	                            )
 	                        )
 	                    );
 	                };
@@ -12930,6 +13026,30 @@
 	                return _react3.default.createElement(
 	                    "div",
 	                    null,
+	                    _react3.default.createElement(
+	                        "div",
+	                        { className: 'overlay', ref: 'overlay' },
+	                        _react3.default.createElement(
+	                            "div",
+	                            {
+	                                className: 'overlay__close-btn',
+	                                onClick: function onClick() {
+	                                    _this.toggleUserOverlay(null);
+	                                }
+	                            },
+	                            _react3.default.createElement(
+	                                "span",
+	                                null,
+	                                "(x)"
+	                            )
+	                        ),
+	                        _react3.default.createElement(_UserOverlay2.default, {
+	                            data: this.state.userOverlayData,
+	                            saveUserNotesFn: function saveUserNotesFn(data) {
+	                                actionRunner('save-user-notes', { payload: data, userVO: _this.state.userOverlayData });
+	                            }
+	                        })
+	                    ),
 	                    _react3.default.createElement(
 	                        "h2",
 	                        null,
@@ -13097,6 +13217,33 @@
 	                }
 
 	                break;
+
+	            case "save-user-notes":
+
+	                _UserDataSv2.default.call("save-user-notes", _data.payload);
+
+	                _UserDataSv2.default.events.Sg_SERVICE_RESPONSE.addOnce(function (_result) {
+	                    console.log("/EmailEditorView/ - GOT DATA SAVE NOTES", _data);
+	                    _data.userVO.user_notes = _result.data.saved_user_notes;
+	                });
+
+	                break;
+
+	            case "toggle-rich-swatch-mark":
+
+	                console.log('......./EmailEditorView/ -actionRunner --toggle-rich-swatch-mark', _data);
+
+	                _UserDataSv2.default.events.Sg_SERVICE_RESPONSE.addOnce(function (_result) {
+	                    console.log("/EmailEditorView/ - GOT DATA SWATCH MARK", _result, _data.clientCollection);
+	                    // _data.clientCollection = _result.data.toggle_rich_swatch_mark_modified;
+	                });
+
+	                //clientCollection
+
+	                _UserDataSv2.default.call("toggle-rich-swatch-mark", _data.payload);
+
+	                break;
+
 	        }
 	    };
 
@@ -32891,10 +33038,12 @@
 	    },
 
 	    props: {
-	        mockUserData: true, // *** REMOVE for production!
+	        mockUserData: false, // *** REMOVE for production!
 	        getAll: "./api/cms/users/get-all",
 	        addUser: "./api/cms/users/add-user",
-	        deleteUser: "./api/cms/users/delete-user"
+	        deleteUser: "./api/cms/users/delete-user",
+	        saveUserNotes: "./api/cms/users/save-user-notes",
+	        toggleRichSwatchMark: "./api/cms/users/toggle-rich-swatch-mark"
 	    },
 
 	    call: function call(_action, _data) {
@@ -32916,6 +33065,14 @@
 
 	            case "delete-user":
 	                url = UserDataSv.props.deleteUser;
+	                break;
+
+	            case "save-user-notes":
+	                url = UserDataSv.props.saveUserNotes;
+	                break;
+
+	            case "toggle-rich-swatch-mark":
+	                url = UserDataSv.props.toggleRichSwatchMark;
 	                break;
 
 	        }
@@ -35407,6 +35564,209 @@
 	        actionRunner: actionRunner
 	    };
 	}
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(23);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(180);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var UserOverlay = function (_React$Component) {
+	  _inherits(UserOverlay, _React$Component);
+
+	  function UserOverlay(props) {
+	    _classCallCheck(this, UserOverlay);
+
+	    var _this = _possibleConstructorReturn(this, (UserOverlay.__proto__ || Object.getPrototypeOf(UserOverlay)).call(this, props));
+
+	    _this.state = {
+	      userLogData: null,
+	      userNotesData: null
+	      // TODO add user notes to state
+	    };
+	    return _this;
+	  }
+
+	  _createClass(UserOverlay, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      console.log('.../UserOverlay/ -componentDidMount', this.props);
+	    }
+	  }, {
+	    key: "componentWillUnmount",
+	    value: function componentWillUnmount() {
+	      console.log('.../UserOverlay/ -componentWillUnmount');
+	      this.setState({ userNotesData: null });
+	    }
+	  }, {
+	    key: "componentDidUpdate",
+	    value: function componentDidUpdate(prevProps) {
+
+	      if (this.props.data === null) {
+	        if (this.props !== prevProps) {
+	          console.log('/UserOverlay/ -componentDidUpdate --SHOULD CLEAR!!!');
+	          this.setState({ userNotesData: '' });
+	        }
+	      }
+
+	      if (this.props.data && this.props.data.user_log) {
+	        if (this.props !== prevProps) {
+	          this.setState({ userLogData: this.props.data.user_log });
+	        }
+	      }
+
+	      if (this.props.data && this.props.data.user_notes) {
+	        if (this.props !== prevProps) {
+	          this.setState({ userNotesData: this.props.data.user_notes });
+	        }
+	      }
+	    }
+	  }, {
+	    key: "renderUserLog",
+	    value: function renderUserLog() {
+	      var _this2 = this;
+
+	      if (!this.state.userLogData) {
+	        return _react2.default.createElement(
+	          "div",
+	          { className: 'user-log__item' },
+	          "Logless"
+	        );
+	      }
+
+	      var getMessageStyle = function getMessageStyle(text) {
+
+	        var s = 'item__message';
+	        var type = text.includes('(+)') ? 'item__message--added' : text.includes('(-)') ? 'item__message--deleted' : 'item__message--new-session';
+
+	        s = s + ' ' + type;
+
+	        return s;
+	      };
+
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "ul",
+	          { className: 'user-log__inner' },
+	          this.state.userLogData.map(function (item, index) {
+
+	            return _react2.default.createElement(
+	              "li",
+	              {
+	                key: index,
+	                className: 'user-log__item'
+	              },
+	              _react2.default.createElement(
+	                "span",
+	                { className: 'item__numeral', style: { backgroundColor: item.colour } },
+	                item.index
+	              ),
+	              _react2.default.createElement(
+	                "span",
+	                { className: getMessageStyle(item.message) },
+	                item.message
+	              )
+	            );
+	          })
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: 'button-strip' },
+	          _react2.default.createElement(
+	            "button",
+	            { onClick: function onClick() {
+	                _this2.setState({ userLogData: _this2.state.userLogData.reverse() });
+	              } },
+	            "REVERSE"
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: 'overlay__inner' },
+	        this.props.data && this.props.data.user_log && _react2.default.createElement(
+	          "div",
+	          { className: "user-log" },
+	          this.renderUserLog()
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "notepad" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "notepad__inner" },
+	            _react2.default.createElement("textarea", {
+	              className: 'notepad__textarea',
+	              ref: "notepad__textarea",
+	              value: this.state.userNotesData,
+	              maxLength: 2048,
+	              onChange: function onChange(e) {
+	                _this3.setState({ userNotesData: e.target.value });
+	              }
+	            })
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: 'button-strip' },
+	            _react2.default.createElement(
+	              "button",
+	              { onClick: function onClick() {
+	                  var textarea = _this3.refs['notepad__textarea'];
+	                  textarea.value = '';
+	                } },
+	              "CLEAR"
+	            ),
+	            _react2.default.createElement(
+	              "button",
+	              { onClick: function onClick() {
+	                  var textarea = _this3.refs['notepad__textarea'];
+	                  _this3.props.saveUserNotesFn({
+	                    uid: _this3.props.data._id,
+	                    text: textarea.value
+	                  });
+	                } },
+	              "SAVE"
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return UserOverlay;
+	}(_react2.default.Component);
+
+	exports.default = UserOverlay;
 
 /***/ })
 /******/ ]);
