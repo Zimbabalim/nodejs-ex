@@ -17,7 +17,7 @@ var bb = require('express-busboy');
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log('/server/ - @as:17:34 >>');
+console.log('/server/ - @as:26.11.20 >>');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
@@ -152,7 +152,7 @@ app.get("/api/cms/users/initial-population", function ( req, res ) {
     
     users.find( { _id : req.query.uid }, {}, function ( e, docs ) {
         
-        console.log('/server/ -INITIAL');
+        //console.log26.('/server/ -INITIAL');
         syncSwatchFields(docs[0]);
         writeToUserLog(
             req.query.uid,
@@ -163,13 +163,13 @@ app.get("/api/cms/users/initial-population", function ( req, res ) {
         var f = _.has( vo, "swatches" );
         
         if( f ){
-            // console.log("/index/ -initial-population : HAS SWATCHES PROP - quit");
+            // //console.log26.("/index/ -initial-population : HAS SWATCHES PROP - quit");
         } else {
-            // console.log("/index/ -initial-population : SHOULD CREATE SWATCHES PROP", req.query.swatches );
+            // //console.log26.("/index/ -initial-population : SHOULD CREATE SWATCHES PROP", req.query.swatches );
             users.findOneAndUpdate( { _id : req.query.uid }, { $set: { swatches: req.query.swatches }} );
         }
         
-        console.log("/index/ - initial-population:", "user", vo.email, "added swatches?", !f );
+        //console.log26.("/index/ - initial-population:", "user", vo.email, "added swatches?", !f );
         res.json( { "added_swatches_prop" : !f } );
         
     });
@@ -245,7 +245,7 @@ var syncSwatchFields = function (user) {
     }
     
     if (user.swatches && user.rich_swatches) {
-        console.log('/server/ -syncSwatchFields --DO NOTHING');
+        //console.log('/server/ -syncSwatchFields --DO NOTHING');
         return;
     }
     
@@ -317,7 +317,7 @@ app.get("/api/cms/users/write-rich-swatches", function ( req, res ) {
 });
 
 app.get("/api/cms/users/toggle-rich-swatch-mark", function ( req, res ) {
-    console.log('/toggle-rich-swatch-mark/ -', req.query);
+    //console.log('/toggle-rich-swatch-mark/ -', req.query);
     var users = db.get( "users" );
     users.findOneAndUpdate( { _id : req.query.uid }, { $set: { rich_swatches: req.query.collection}} );
     res.json( { "toggle_rich_swatch_mark_modified" : req.query.collection } );
@@ -391,7 +391,7 @@ app.get("/api/cms/sundries/add-story", function ( req, res ) {
     var data = db.get( "sundries" );
     
     req.query.date = getPrettyDate();
-    console.log("/index/ - ************", req.query );
+    //console.log("/index/ - ************", req.query );
     
     data.insert( req.query );
     
