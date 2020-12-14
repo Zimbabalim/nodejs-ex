@@ -9897,7 +9897,7 @@
 	function Context() {
 
 	    var init = function init() {
-	        console.log("/Context/ -init yyy");
+	        console.log("/Context/ -init 14.12.20");
 
 	        var mediator = new _zz2.default.Node(null, _Mediator2.default, { name: "mediator" });
 	        mediator.init();
