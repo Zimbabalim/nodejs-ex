@@ -8,6 +8,10 @@
     "application",
     "openshift"
   ],
+  "scripts": {
+    "build": "node server.js",
+    "watch": "nodemon server.js"
+  },
   "author": {
     "name": "OpenShift",
     "email": "ramr@example.org",
