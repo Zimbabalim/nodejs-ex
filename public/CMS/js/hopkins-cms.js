@@ -12492,15 +12492,15 @@
 
 	var _EmailEditorView2 = _interopRequireDefault(_EmailEditorView);
 
-	var _SundriesEditorView = __webpack_require__(184);
+	var _SundriesEditorView = __webpack_require__(185);
 
 	var _SundriesEditorView2 = _interopRequireDefault(_SundriesEditorView);
 
-	var _LoginView = __webpack_require__(187);
+	var _LoginView = __webpack_require__(188);
 
 	var _LoginView2 = _interopRequireDefault(_LoginView);
 
-	var _NavUI = __webpack_require__(188);
+	var _NavUI = __webpack_require__(189);
 
 	var _NavUI2 = _interopRequireDefault(_NavUI);
 
@@ -12638,7 +12638,7 @@
 
 	var _UserDataSv2 = _interopRequireDefault(_UserDataSv);
 
-	var _UserOverlay = __webpack_require__(189);
+	var _UserOverlay = __webpack_require__(184);
 
 	var _UserOverlay2 = _interopRequireDefault(_UserOverlay);
 
@@ -12694,9 +12694,6 @@
 	                    // isFirstRun: true
 	                };
 	            },
-
-	            // 2144441/1 bathroom repair
-	            // 2144441/2
 
 	            componentDidMount: function componentDidMount() {
 	                els.reactEl = _reactDom2.default.findDOMNode(this);
@@ -34602,6 +34599,209 @@
 
 	"use strict";
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(23);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(180);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var UserOverlay = function (_React$Component) {
+	  _inherits(UserOverlay, _React$Component);
+
+	  function UserOverlay(props) {
+	    _classCallCheck(this, UserOverlay);
+
+	    var _this = _possibleConstructorReturn(this, (UserOverlay.__proto__ || Object.getPrototypeOf(UserOverlay)).call(this, props));
+
+	    _this.state = {
+	      userLogData: null,
+	      userNotesData: null
+	      // TODO add user notes to state
+	    };
+	    return _this;
+	  }
+
+	  _createClass(UserOverlay, [{
+	    key: "componentDidMount",
+	    value: function componentDidMount() {
+	      console.log('.../UserOverlay/ -componentDidMount', this.props);
+	    }
+	  }, {
+	    key: "componentWillUnmount",
+	    value: function componentWillUnmount() {
+	      console.log('.../UserOverlay/ -componentWillUnmount');
+	      this.setState({ userNotesData: null });
+	    }
+	  }, {
+	    key: "componentDidUpdate",
+	    value: function componentDidUpdate(prevProps) {
+
+	      if (this.props.data === null) {
+	        if (this.props !== prevProps) {
+	          console.log('/UserOverlay/ -componentDidUpdate --SHOULD CLEAR!!!');
+	          this.setState({ userNotesData: '' });
+	        }
+	      }
+
+	      if (this.props.data && this.props.data.user_log) {
+	        if (this.props !== prevProps) {
+	          this.setState({ userLogData: this.props.data.user_log });
+	        }
+	      }
+
+	      if (this.props.data && this.props.data.user_notes) {
+	        if (this.props !== prevProps) {
+	          this.setState({ userNotesData: this.props.data.user_notes });
+	        }
+	      }
+	    }
+	  }, {
+	    key: "renderUserLog",
+	    value: function renderUserLog() {
+	      var _this2 = this;
+
+	      if (!this.state.userLogData) {
+	        return _react2.default.createElement(
+	          "div",
+	          { className: 'user-log__item' },
+	          "Logless"
+	        );
+	      }
+
+	      var getMessageStyle = function getMessageStyle(text) {
+
+	        var s = 'item__message';
+	        var type = text.includes('(+)') ? 'item__message--added' : text.includes('(-)') ? 'item__message--deleted' : 'item__message--new-session';
+
+	        s = s + ' ' + type;
+
+	        return s;
+	      };
+
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	          "ul",
+	          { className: 'user-log__inner' },
+	          this.state.userLogData.map(function (item, index) {
+
+	            return _react2.default.createElement(
+	              "li",
+	              {
+	                key: index,
+	                className: 'user-log__item'
+	              },
+	              _react2.default.createElement(
+	                "span",
+	                { className: 'item__numeral', style: { backgroundColor: item.colour } },
+	                item.index
+	              ),
+	              _react2.default.createElement(
+	                "span",
+	                { className: getMessageStyle(item.message) },
+	                item.message
+	              )
+	            );
+	          })
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: 'button-strip' },
+	          _react2.default.createElement(
+	            "button",
+	            { onClick: function onClick() {
+	                _this2.setState({ userLogData: _this2.state.userLogData.reverse() });
+	              } },
+	            "REVERSE"
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      var _this3 = this;
+
+	      return _react2.default.createElement(
+	        "div",
+	        { className: 'overlay__inner' },
+	        this.props.data && this.props.data.user_log && _react2.default.createElement(
+	          "div",
+	          { className: "user-log" },
+	          this.renderUserLog()
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "notepad" },
+	          _react2.default.createElement(
+	            "div",
+	            { className: "notepad__inner" },
+	            _react2.default.createElement("textarea", {
+	              className: 'notepad__textarea',
+	              ref: "notepad__textarea",
+	              value: this.state.userNotesData,
+	              maxLength: 2048,
+	              onChange: function onChange(e) {
+	                _this3.setState({ userNotesData: e.target.value });
+	              }
+	            })
+	          ),
+	          _react2.default.createElement(
+	            "div",
+	            { className: 'button-strip' },
+	            _react2.default.createElement(
+	              "button",
+	              { onClick: function onClick() {
+	                  var textarea = _this3.refs['notepad__textarea'];
+	                  textarea.value = '';
+	                } },
+	              "CLEAR"
+	            ),
+	            _react2.default.createElement(
+	              "button",
+	              { onClick: function onClick() {
+	                  var textarea = _this3.refs['notepad__textarea'];
+	                  _this3.props.saveUserNotesFn({
+	                    uid: _this3.props.data._id,
+	                    text: textarea.value
+	                  });
+	                } },
+	              "SAVE"
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return UserOverlay;
+	}(_react2.default.Component);
+
+	exports.default = UserOverlay;
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
 	/**
 	 * Zimbabalim
 	 * 23/06/2016
@@ -34620,11 +34820,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _SundriesDataSv = __webpack_require__(185);
+	var _SundriesDataSv = __webpack_require__(186);
 
 	var _SundriesDataSv2 = _interopRequireDefault(_SundriesDataSv);
 
-	var _FileUploadSv = __webpack_require__(186);
+	var _FileUploadSv = __webpack_require__(187);
 
 	var _FileUploadSv2 = _interopRequireDefault(_FileUploadSv);
 
@@ -35015,7 +35215,7 @@
 	}
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35112,7 +35312,7 @@
 	};
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35194,7 +35394,7 @@
 	}
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35301,7 +35501,14 @@
 	                }
 	            },
 
+	            onKeyDown: function onKeyDown(e) {
+	                if (e.key === 'Enter') {
+	                    this.onSubmit();
+	                }
+	            },
+
 	            render: function render() {
+	                var _this = this;
 
 	                //defaultValue={"83Fortess"} // *** NOTE for debugging add to password input
 
@@ -35324,7 +35531,11 @@
 	                                { htmlFor: "username" },
 	                                "Username:"
 	                            ),
-	                            _react3.default.createElement("input", { type: "text", id: "username", ref: "username" })
+	                            _react3.default.createElement("input", { type: "text", id: "username", ref: "username",
+	                                onKeyDown: function onKeyDown(e) {
+	                                    _this.onKeyDown(e);
+	                                }
+	                            })
 	                        ),
 	                        _react3.default.createElement(
 	                            "div",
@@ -35334,7 +35545,11 @@
 	                                { htmlFor: "password" },
 	                                "Password:"
 	                            ),
-	                            _react3.default.createElement("input", { type: "text", id: "password", ref: "password" })
+	                            _react3.default.createElement("input", { type: "text", id: "password", ref: "password",
+	                                onKeyDown: function onKeyDown(e) {
+	                                    _this.onKeyDown(e);
+	                                }
+	                            })
 	                        )
 	                    ),
 	                    _react3.default.createElement(
@@ -35410,7 +35625,7 @@
 	}
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35565,209 +35780,6 @@
 	        actionRunner: actionRunner
 	    };
 	}
-
-/***/ }),
-/* 189 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(23);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(180);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserOverlay = function (_React$Component) {
-	  _inherits(UserOverlay, _React$Component);
-
-	  function UserOverlay(props) {
-	    _classCallCheck(this, UserOverlay);
-
-	    var _this = _possibleConstructorReturn(this, (UserOverlay.__proto__ || Object.getPrototypeOf(UserOverlay)).call(this, props));
-
-	    _this.state = {
-	      userLogData: null,
-	      userNotesData: null
-	      // TODO add user notes to state
-	    };
-	    return _this;
-	  }
-
-	  _createClass(UserOverlay, [{
-	    key: "componentDidMount",
-	    value: function componentDidMount() {
-	      console.log('.../UserOverlay/ -componentDidMount', this.props);
-	    }
-	  }, {
-	    key: "componentWillUnmount",
-	    value: function componentWillUnmount() {
-	      console.log('.../UserOverlay/ -componentWillUnmount');
-	      this.setState({ userNotesData: null });
-	    }
-	  }, {
-	    key: "componentDidUpdate",
-	    value: function componentDidUpdate(prevProps) {
-
-	      if (this.props.data === null) {
-	        if (this.props !== prevProps) {
-	          console.log('/UserOverlay/ -componentDidUpdate --SHOULD CLEAR!!!');
-	          this.setState({ userNotesData: '' });
-	        }
-	      }
-
-	      if (this.props.data && this.props.data.user_log) {
-	        if (this.props !== prevProps) {
-	          this.setState({ userLogData: this.props.data.user_log });
-	        }
-	      }
-
-	      if (this.props.data && this.props.data.user_notes) {
-	        if (this.props !== prevProps) {
-	          this.setState({ userNotesData: this.props.data.user_notes });
-	        }
-	      }
-	    }
-	  }, {
-	    key: "renderUserLog",
-	    value: function renderUserLog() {
-	      var _this2 = this;
-
-	      if (!this.state.userLogData) {
-	        return _react2.default.createElement(
-	          "div",
-	          { className: 'user-log__item' },
-	          "Logless"
-	        );
-	      }
-
-	      var getMessageStyle = function getMessageStyle(text) {
-
-	        var s = 'item__message';
-	        var type = text.includes('(+)') ? 'item__message--added' : text.includes('(-)') ? 'item__message--deleted' : 'item__message--new-session';
-
-	        s = s + ' ' + type;
-
-	        return s;
-	      };
-
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "ul",
-	          { className: 'user-log__inner' },
-	          this.state.userLogData.map(function (item, index) {
-
-	            return _react2.default.createElement(
-	              "li",
-	              {
-	                key: index,
-	                className: 'user-log__item'
-	              },
-	              _react2.default.createElement(
-	                "span",
-	                { className: 'item__numeral', style: { backgroundColor: item.colour } },
-	                item.index
-	              ),
-	              _react2.default.createElement(
-	                "span",
-	                { className: getMessageStyle(item.message) },
-	                item.message
-	              )
-	            );
-	          })
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: 'button-strip' },
-	          _react2.default.createElement(
-	            "button",
-	            { onClick: function onClick() {
-	                _this2.setState({ userLogData: _this2.state.userLogData.reverse() });
-	              } },
-	            "REVERSE"
-	          )
-	        )
-	      );
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      var _this3 = this;
-
-	      return _react2.default.createElement(
-	        "div",
-	        { className: 'overlay__inner' },
-	        this.props.data && this.props.data.user_log && _react2.default.createElement(
-	          "div",
-	          { className: "user-log" },
-	          this.renderUserLog()
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "notepad" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "notepad__inner" },
-	            _react2.default.createElement("textarea", {
-	              className: 'notepad__textarea',
-	              ref: "notepad__textarea",
-	              value: this.state.userNotesData,
-	              maxLength: 2048,
-	              onChange: function onChange(e) {
-	                _this3.setState({ userNotesData: e.target.value });
-	              }
-	            })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: 'button-strip' },
-	            _react2.default.createElement(
-	              "button",
-	              { onClick: function onClick() {
-	                  var textarea = _this3.refs['notepad__textarea'];
-	                  textarea.value = '';
-	                } },
-	              "CLEAR"
-	            ),
-	            _react2.default.createElement(
-	              "button",
-	              { onClick: function onClick() {
-	                  var textarea = _this3.refs['notepad__textarea'];
-	                  _this3.props.saveUserNotesFn({
-	                    uid: _this3.props.data._id,
-	                    text: textarea.value
-	                  });
-	                } },
-	              "SAVE"
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return UserOverlay;
-	}(_react2.default.Component);
-
-	exports.default = UserOverlay;
 
 /***/ })
 /******/ ]);
