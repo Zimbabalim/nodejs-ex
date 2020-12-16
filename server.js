@@ -17,7 +17,7 @@ var bb = require('express-busboy');
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log('/server/ - @as: 14.12.20/22:11');
+console.log('/server/ - @as: 16.12.20/13:24');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
@@ -119,7 +119,7 @@ console.log('/server/ - <<');
 
 app.get("/", function( req, res ){
     console.log("***************************");
-    console.log("NEW SESSION", Date.now() );
+    console.log("NEW SESSION", new Date() );
     console.log("***************************");
     
     sessionLogPrettyMeta.index = 1;
