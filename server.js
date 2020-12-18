@@ -17,7 +17,7 @@ var bb = require('express-busboy');
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log('/server/ - @as: 16.12.20/17:07');
+// console.log('/server/ - @as: 16.12.20/17:07');
 Object.assign=require('object-assign');
 
 app.engine('html', require('ejs').renderFile);
@@ -112,7 +112,7 @@ initDb(function(err){
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
-console.log('/server/ - <<');
+console.log('/server/ ->> release: 18.12.20');
 
 
 // ======== ROUTES ========================================================================
